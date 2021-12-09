@@ -1,0 +1,44 @@
+.main {
+  width: 100%;
+  padding: 120px 0;
+}
+.head {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: 100px;
+
+  color: #111111;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.img {
+  margin: 50px 100px 50px 10px;
+  width: 620px;
+  /* height: auto; */
+}
+.verticalLine {
+  width: 0px;
+  height: 511px;
+  border: none;
+  border-left: 10px solid #111111;
+  margin:0;
+  transform: rotate(-180deg);
+}
+.text {
+  max-width: 610px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.75rem;
+    margin: 50px auto 50px 90px;
+  color: #343434;
+}

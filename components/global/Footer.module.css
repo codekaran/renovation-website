@@ -1,0 +1,56 @@
+.main {
+  width: 100%;
+  height: 345px;
+  background: #111111;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 36px 90px;
+}
+/* Social */
+.social {
+  flex: 0.4;
+}
+.name {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.iconStrip {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+}
+.icon {
+  height: 24px;
+  width: 24px;
+}
+
+/* Contact */
+.contact {
+  flex: 0.25;
+}
+.title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+.info {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 14px auto 40px;
+}
+/* Address */
+.address {
+  flex: 0.35;
+}
