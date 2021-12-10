@@ -11,14 +11,11 @@
 .name {
   width: 152px;
   height: 42px;
-
   font-family: Raleway;
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
-
   color: #111111;
 }
 .hire_me_box {
@@ -36,11 +33,9 @@
 }
 .hire_me {
   font-family: Raleway;
-  font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-
   color: #ffffff;
 }
 
@@ -52,7 +47,6 @@
 }
 .slider_box {
   height: 7px;
-  /* padding: 0 10px; */
   width: 100%;
 }
 .slider {
@@ -63,7 +57,6 @@
   position: relative;
   left: 12px;
   transition: ease-in-out 0.6s;
-  /* animation: moveslider 1s infinite; */
 }
 .navbar {
   display: flex;
@@ -71,7 +64,6 @@
 }
 .nav_items {
   font-family: Raleway;
-  font-style: normal;
   font-weight: 600;
   cursor: pointer;
   font-size: 18px;
@@ -80,11 +72,9 @@
 }
 .nav_items__active {
   font-family: Raleway;
-  font-style: normal;
   font-weight: 800;
   cursor: pointer;
   font-size: 18px;
   line-height: 21px;
-
   color: #111111;
 }

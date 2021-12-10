@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import style from "./Header.module.css";
 import Image from "next/image";
 import Suitcase from "../../public/Suitcase.svg";
@@ -28,16 +28,21 @@ export default Header;
 const ToggleBar = () => {
   const [value, setValue] = useState(0);
   const slider = useRef();
-  const clickHandle = (event) => {
-    if (event.target.innerHTML === "Home") {
+  const [pathname, setPathname] = useState();
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, [pathname]);
+  const clickHandle = () => {
+    console.log(pathname);
+    if (pathname === "/") {
       slider.current.style.left = "4%";
       setValue(0);
     }
-    if (event.target.innerHTML === "About") {
+    if (pathname === "/about") {
       slider.current.style.left = "44%";
       setValue(1);
     }
-    if (event.target.innerHTML === "Service") {
+    if (pathname === "/service") {
       slider.current.style.left = "88%";
       setValue(2);
     }
