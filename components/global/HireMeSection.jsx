@@ -4,9 +4,12 @@ import service_hire_me from "../../public/service_hire_me.png";
 import suitcase from "../../public/Suitcase.svg";
 import style from "./HireMeSection.module.css";
 
-const HireMeSection = () => {
+const HireMeSection = (props) => {
   return (
-    <div className={style.hire_me_section}>
+    <div
+      className={style.hire_me_section}
+      style={{ marginBottom: props.marginBottom === true ? "120px" : "0px" }}
+    >
       <div className={style.section_content}>
         <div className={style.content_header}>
           Do you want to renovate your house or office ?
@@ -31,4 +34,3 @@ const HireMeSection = () => {
 };
 
 export default HireMeSection;
-
