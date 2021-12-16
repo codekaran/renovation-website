@@ -1,22 +1,62 @@
-.provide_section {
-  padding: 100px 0 100px 90px;
+.hero {
+  height: 110vh;
+}
+.hero_image {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  left: 820px;
+  top: 160px;
+}
+.hero_heading {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 113px;
+  color: #111111;
+  padding: 54px 0 0 100px;
+}
+.section {
+  padding: 84px 0px 0px 90px;
 }
 .section_header {
   font-family: Raleway;
+  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   color: #111111;
-  padding: 15px 30px;
+
+  padding-left: 30px;
+  padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .section_content {
-  padding: 0 20px;
+  padding-top: 32px;
+  padding-left: 10px;
+}
+.content_header {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #111111;
+}
+.content_body {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 42px;
+  color: #343434;
+  padding-top: 20px;
 }
 .strip {
   position: relative;
   margin-right: 100px;
-  padding: 64px 20px 64px 64px;
+  padding: 72px 20px 72px 64px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -30,7 +70,7 @@
 .float {
   position: absolute;
   z-index: 1;
-  top: -80px;
+  top: -50px;
   left: -1%;
   font-family: Raleway;
   font-weight: bold;

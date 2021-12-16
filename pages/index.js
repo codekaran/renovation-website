@@ -1,16 +1,11 @@
-import AboutMe from "../components/home/AboutMe";
-import ThingsIDo from "../components/home/ThingsIDo";
+import React from "react";
+import HomePage from "../components/HomePage";
 
-const Content = [
-  { heading: "Things I do", content: "Rishabh Prakash" },
-  { heading: "Things not to do", content: "Rishabh Prakash" },
-];
-
-export default function Home() {
+const Home = () => {
   return (
     <div>
-      <AboutMe />
-      <ThingsIDo/>
+      <HomePage />
     </div>
   );
-}
+};
+export default Home;
