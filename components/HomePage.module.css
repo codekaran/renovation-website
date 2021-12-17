@@ -37,6 +37,108 @@
   padding-top: 20px;
 }
 
+/* Hero Section */
+.hero_section {
+  height: 800px;
+  width: 100%;
+  position: relative;
+}
+.lightbulb {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: auto;
+  top: -12px;
+  left: -25%;
+  right: 25%;
+}
+.hero_content {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.hero_body {
+  flex: 0.55;
+  height: 100%;
+  padding: 70px 100px;
+}
+.greeting {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  color: #343434;
+}
+.name {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 113px;
+  color: #111111;
+  padding-top: 40px;
+  width: 360px;
+}
+.profession {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #343434;
+  padding-top: 10px;
+}
+.intro {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  color: #343434;
+  padding-top: 30px;
+}
+.buttons {
+  padding-top: 40px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.hire_me,
+.my_work {
+  width: 187px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #111111;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+.hire_me {
+  background-color: #111111;
+  color: #ffffff;
+}
+.my_work {
+  background-color: #ffffff;
+  color: #111111;
+}
+.hero_image {
+  flex: 0.45;
+  height: 800px;
+  border: 20px solid #111111;
+  border-right: none;
+  box-sizing: border-box;
+  border-radius: 300px 0px 0px 0px;
+}
+
 /* About me section */
 .image {
   height: 100%;
@@ -75,24 +177,12 @@
   background: rgba(0, 0, 0, 0.2);
   /* height: 136vh; */
   display: grid;
-  grid-template-columns: repeat(22, 1fr);
-  grid-template-rows: repeat(30, 50px);
+  grid-template-columns: repeat(22, minmax(30px, auto));
+  grid-template-rows: repeat(30, minmax(40px, auto));
   gap: 1px;
 }
 
 /* Testimonial Section */
-.carousel_buttons {
-  display: inline-block;
-  position: absolute;
-  right: 0px;
-  margin-right: 120px;
-}
-.arrows {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 600;
-  margin: auto 20px;
-}
 .review_card {
   padding: 0 30px;
   width: auto;

@@ -1,41 +1,46 @@
 import React from "react";
 import Image from "next/image";
 import style from "./HomePage.module.css";
-import about_me from "../public/about_me.png";
-import service_1 from "../public/service_1.png";
-import service_2 from "../public/service_2.png";
-import service_3 from "../public/service_3.png";
-import service_4 from "../public/service_4.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import lightbulb from "../public/Lightbulb.svg";
 
-const serviceData = [
-  {
-    img: service_1,
-    name: "Service 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-  },
-  {
-    img: service_2,
-    name: "Service 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-  },
-  {
-    img: service_3,
-    name: "Service 3",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-  },
-  {
-    img: service_4,
-    name: "Service 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-  },
-];
-const HomePage = () => {
-  const AboutMeSection = () => {
+const HomePage = (props) => {
+  const HeroSection = (props) => {
+    return (
+      <div className={style.hero_section}>
+        <div className={style.lightbulb}>
+          <Image src={lightbulb} alt="lightbulb" />
+        </div>
+        <div className={style.hero_content}>
+          <div className={style.hero_body}>
+            <div className={style.greeting}>{props.greeting}</div>
+            <div className={style.name}>{props.name}</div>
+            <div className={style.profession}>{props.profession}</div>
+            <div className={style.intro}>{props.intro}</div>
+            <div className={style.buttons}>
+              <div className={style.hire_me}>{props.button.hire_me.name}</div>
+              <div className={style.my_work}>{props.button.my_work.name}</div>
+            </div>
+          </div>
+          <div
+            className={style.hero_image}
+            style={{
+              backgroundImage:
+                "url(https://images.unsplash.com/photo-1564182842519-8a3b2af3e228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9uJTIwd29ya2VyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60)",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        </div>
+      </div>
+    );
+  };
+  const AboutMeSection = (props) => {
     return (
       <div className={style.section}>
-        <div className={style.section_heading}>About me</div>
+        <div className={style.section_heading}>{props.heading}</div>
         <div
           className={style.section_content}
           style={{
@@ -46,35 +51,25 @@ const HomePage = () => {
           }}
         >
           <div className={style.image}>
-            <Image src={about_me} alt="about_me_png" />
+            <Image src={props.src} alt="about_me_png" />
           </div>
           <hr className={style.verticalLine} />
           <div className={style.content_body} style={{ width: "50%" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
-            sit faucibus massa. Integer blandit quisque rutrum quis mauris
-            blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas
-            posuere id enim quis leo. Tortor consectetur egestas dapibus non. Mi
-            diam etiam nunc ornare dui, vel odio. Placerat ultricies nisl risus
-            risus malesuada in massa fringilla amet. Diam risus mi, ut et,
-            luctus risus lorem ac. Sapien purus varius semper morbi auctor at
-            non a. Hendrerit morbi at est commodo neque rutrum massa. Morbi
-            tortor lectus pellentesque a amet. Fames leo fames feugiat bibendum
-            felis augue est. Felis sem tristique.
+            {props.content}
           </div>
         </div>
       </div>
     );
   };
-  const ThingsIDoSection = () => {
+  const ThingsIDoSection = (props) => {
     return (
       <div
         className={style.section}
         style={{ background: "rgba(231, 223, 34, 0.1)" }}
       >
-        <div className={style.section_heading}>Things I do</div>
+        <div className={style.section_heading}>{props.heading}</div>
         <div className={style.section_content} style={{ alignItems: "center" }}>
-          {serviceData.map((service, key) => {
+          {props.services.map((service, key) => {
             return (
               <Card
                 key={key}
@@ -102,90 +97,11 @@ const HomePage = () => {
       </div>
     );
   };
-  const Gallery = () => {
-    const imagedata = [
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "1",
-        col_end: "10",
-        row_start: "1",
-        row_end: "10",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "10",
-        col_end: "15",
-        row_start: "1",
-        row_end: "7",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "15",
-        col_end: "23",
-        row_start: "1",
-        row_end: "9",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "1",
-        col_end: "10",
-        row_start: "10",
-        row_end: "15",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "10",
-        col_end: "15",
-        row_start: "7",
-        row_end: "15",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "15",
-        col_end: "23",
-        row_start: "9",
-        row_end: "15",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "1",
-        col_end: "14",
-        row_start: "15",
-        row_end: "23",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "14",
-        col_end: "23",
-        row_start: "15",
-        row_end: "22",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "1",
-        col_end: "7",
-        row_start: "23",
-        row_end: "31",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "7",
-        col_end: "14",
-        row_start: "23",
-        row_end: "31",
-      },
-      {
-        url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
-        col_start: "14",
-        col_end: "23",
-        row_start: "22",
-        row_end: "31",
-      },
-    ];
-    const GalleryImage = (props) => {
+  const Gallery = (props) => {
+    const GalleryImage = (props, key) => {
       return (
         <div
-          key={props.key}
+          key={key}
           style={{
             backgroundImage: "url(" + props.url + ")",
             backgroundPosition: "center",
@@ -202,10 +118,10 @@ const HomePage = () => {
     };
     return (
       <div className={style.section}>
-        <div className={style.section_heading}>Work I have done</div>
+        <div className={style.section_heading}>{props.heading}</div>
         <div className={style.section_content} style={{ display: "block" }}>
           <div className={style.gallery}>
-            {imagedata.map((image, key) => {
+            {props.galleryData.map((image, key) => {
               return GalleryImage(image, key);
             })}
           </div>
@@ -231,35 +147,32 @@ const HomePage = () => {
       items: 1,
     },
   };
-  const ReviewCard = () => {
+  const ReviewCard = (props, key) => {
     return (
-      <div className={style.review_card}>
+      <div className={style.review_card} key={key}>
         <div className={style.box}>
           <div className={style.user}>
-            <div className={style.user_profile}></div>
-            <div className={style.user_name}>Robert jr.</div>
+            <div
+              className={style.user_profile}
+              style={{
+                backgroundImage: "url(" + props.url + ")",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div className={style.user_name}>{props.name}</div>
           </div>
-          <div className={style.review}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
-            sit faucibus massa. Integer blandit quisque rutrum quis mauris
-            blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas
-            posuere id enim quis leo. Tortor consectetur egestas dapibus non.
-          </div>
+          <div className={style.review}>{props.review_msg}</div>
         </div>
       </div>
     );
   };
-  const Testimonials = () => {
+  const Testimonials = (props) => {
     return (
       <div className={style.section}>
         <div className={style.section_heading}>
-          <div style={{ display: "inline-block" }}>Testimonials</div>
-          {/* If we want to add custom buttons for testimonial carousel */}
-          <div className={style.carousel_buttons}>
-            <div className={style.arrows}>{"<"}</div>
-            <div className={style.arrows}>{">"}</div>
-          </div>
+          <div>{props.heading}</div>
         </div>
         <div className={style.section_content} style={{ display: "block" }}>
           <Carousel
@@ -271,8 +184,9 @@ const HomePage = () => {
             autoPlaySpeed={1000}
             keyBoardControl={true}
           >
-            <ReviewCard />
-            <ReviewCard />
+            {props.reviews.map((e, key) => {
+              return ReviewCard(e, key);
+            })}
           </Carousel>
         </div>
       </div>
@@ -280,10 +194,11 @@ const HomePage = () => {
   };
   return (
     <div>
-      {AboutMeSection()}
-      {ThingsIDoSection()}
-      {Gallery()}
-      {Testimonials()}
+      {HeroSection(props.data[0])}
+      {AboutMeSection(props.data[1])}
+      {ThingsIDoSection(props.data[2])}
+      {Gallery(props.data[3])}
+      {Testimonials(props.data[4])}
     </div>
   );
 };
