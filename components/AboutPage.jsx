@@ -1,121 +1,165 @@
 import React from "react";
-import Image from "next/image";
-import style from "./AboutPage.module.css";
-import HireMeSection from "./global/HireMeSection";
-import Image1 from "../public/Image1.png";
-import Image2 from "../public/Image2.png";
-import Image3 from "../public/Image3.png";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaTwitter,
+  FaPhoneAlt,
+} from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { MdEmail, MdLocationOn } from "react-icons/md";
+import HiremeSection from "./HiremeSection";
 
-const AboutPage = (props) => {
-  const HeroSection = (props) => {
-    return (
-      <div className={style.hero}>
-        <div className={style.hero_heading}>{props.pageHeading}</div>
-        <div className={style.section}>
-          <div className={style.hero_image1}>
-            <Image src={Image1} alt="Hero Image 1" />
-          </div>
-          <div className={style.hero_image2}>
-            <Image src={Image2} alt="Hero Image 2" />
-          </div>
-          <div className={style.hero_image3}>
-            <Image src={Image3} alt="Hero Image 3" />
-          </div>
-          <div
-            className={style.content_body}
-            style={{ lineHeight: "42px", width: "75%" }}
-          >
-            {props.content1}
-          </div>
-          <div
-            className={style.content_body}
-            style={{ lineHeight: "42px", width: "55%" }}
-          >
-            {props.content2}
-          </div>
-          <div
-            className={style.content_body}
-            style={{ lineHeight: "42px", width: "35%" }}
-          >
-            {props.content3}
-          </div>
-          <div className={style.social_icons}>
-            <div className={style.heading}>{props.social.heading}</div>
-            <div className={style.icon_strip}>
-              {props.social.icons.map((e, key) => {
-                return e;
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const ContactSection = (props) => {
-    return (
-      <div className={style.contact_section}>
-        {props.contact.map((r, key) => {
-          return (
-            <Card key={key} icon={r.icon} heading={r.heading} body={r.body} />
-          );
-        })}
-      </div>
-    );
-  };
-  const Card = (props) => {
-    return (
-      <div className={style.contact_card}>
-        <div className={style.icon}>{props.icon}</div>
-        <div className={style.heading}>{props.heading}</div>
-        <div className={style.content}>{props.body}</div>
-      </div>
-    );
-  };
-  const SkillsSection = (props) => {
-    return (
-      <div className={style.section}>
-        <div className={style.section_header}>{props.heading}</div>
-        <div className={style.section_content}>
-          {props.content.map((skill, key) => {
-            return (
-              <SkillCard
-                key={key}
-                image={skill.image}
-                heading={skill.heading}
-                body={skill.body}
-              />
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
-  const SkillCard = (props) => {
-    return (
-      <div className={style.box}>
-        <div className={style.card}>
-          <div className={style.image}>
-            <Image src={props.image} alt={props.heading} />
-          </div>
-          <div className={style.card_content}>
-            <div className={style.content_header}>{props.heading}</div>
-            <div
-              className={style.content_body}
-              style={{ textAlign: "center", padding: "16px" }}
-            >
-              {props.body}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+const url =
+  "https://images.unsplash.com/photo-1597476817120-9b82cef5ce82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVub3ZhdGlvbnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60";
+const AboutPage = () => {
   return (
-    <div>
-      {HeroSection(props.data[0])}
-      {ContactSection(props.data[1])}
-      {SkillsSection(props.data[2])}
-      <HireMeSection data={props.data[3]} />
+    <div className="about-page">
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="heading">About me</div>
+        <div>
+          <div className="intro width1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
+            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
+            sit faucibus massa. Integer blandit quisque rutrum quis mauris
+            blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas
+            posuere id enim quis leo. Tortor consectetur egestas dapibus non.
+          </div>
+          <div className="intro width2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
+            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
+            sit faucibus massa. Integer blandit quisque rutrum quis mauris
+            blandit amet.
+          </div>
+          <div className="intro width3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
+            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
+            sit faucibus massa. Integer blandit quisque rutrum quis mauris
+            blandit amet.
+          </div>
+        </div>
+        <div className="hero-images">
+          <div
+            className="bg-img img1"
+            style={{ backgroundImage: "url(" + url + ")" }}
+          ></div>
+          <div
+            className="bg-img img2"
+            style={{ backgroundImage: "url(" + url + ")" }}
+          ></div>
+          <div
+            className="bg-img img3"
+            style={{ backgroundImage: "url(" + url + ")" }}
+          ></div>
+        </div>
+        <div className="social-icons">
+          <div className="sub-heading">Follow me on</div>
+          <div className="icons">
+            <FaFacebookF />
+            <AiFillInstagram />
+            <FaLinkedinIn />
+            <FaTwitter />
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="contact-section bg-yellow">
+        <div className="card">
+          <div className="icon">
+            <FaPhoneAlt />
+          </div>
+          <div className="heading">Contact no.</div>
+          <div className="sub-heading">+362 2522065132</div>
+        </div>
+        <div className="card">
+          <div className="icon">
+            <MdEmail />
+          </div>
+          <div className="heading">Email address</div>
+          <div className="sub-heading">hello@gmail.com</div>
+        </div>
+        <div className="card">
+          <div className="icon">
+            <MdLocationOn />
+          </div>
+          <div className="heading">Address</div>
+          <div className="sub-heading">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
+            habitant eget ut nunc
+          </div>
+        </div>
+      </div>
+
+      {/* Skills section */}
+      <div className="skill-section">
+        <div className="heading">Skills I have</div>
+        <div className="content">
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{ backgroundImage: "url(" + url + ")" }}
+            />
+            <div className="card-heading">Skill 1</div>
+            <div className="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
+              erat vitae cursus at. Volutpat,
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{ backgroundImage: "url(" + url + ")" }}
+            />
+            <div className="card-heading">Skill 1</div>
+            <div className="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
+              erat vitae cursus at. Volutpat,
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{ backgroundImage: "url(" + url + ")" }}
+            />
+            <div className="card-heading">Skill 1</div>
+            <div className="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
+              erat vitae cursus at. Volutpat,
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{ backgroundImage: "url(" + url + ")" }}
+            />
+            <div className="card-heading">Skill 1</div>
+            <div className="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
+              erat vitae cursus at. Volutpat,
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{ backgroundImage: "url(" + url + ")" }}
+            />
+            <div className="card-heading">Skill 1</div>
+            <div className="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
+              erat vitae cursus at. Volutpat,
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Hire me section */}
+      <HiremeSection />
     </div>
   );
 };

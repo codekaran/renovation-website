@@ -1,0 +1,1148 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$dark: #000000;
+$dark2: #111111;
+$dark3: #343434;
+$light: #ffffff;
+$yellow: #e7df22;
+$mob: 990px;
+
+// Navbar
+.navbar {
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid rgba($dark, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6.5%;
+    @media (max-width: $mob) {
+        height: 56px;
+    }
+
+    .brand-name {
+        flex: 0.3;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: $dark2;
+        @media (max-width: $mob) {
+            flex: 0.35;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    .nav-links {
+        flex: 0.4;
+        display: flex;
+        justify-content: space-evenly;
+        @media (max-width: $mob) {
+            display: none;
+        }
+
+        .link {
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            width: 65px;
+            text-align: center;
+            color: $dark3;
+        }
+    }
+    .visible-lg {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex: 0.3;
+        @media (max-width: $mob) {
+            display: none;
+        }
+    }
+    .dropdown {
+        height: 40px;
+        width: 80px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: $dark;
+        border: 1px solid $dark;
+        padding: 0px 10px;
+        text-transform: uppercase;
+        margin-left: 20px;
+    }
+
+    .hidden-lg {
+        display: none;
+        @media (max-width: $mob) {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            flex: 0.5;
+        }
+    }
+    .toggle-btn {
+        font-size: 22px;
+        margin-left: 15px;
+    }
+    .mobile-nav {
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background-color: rgba($dark, 0.3);
+        .box {
+            width: 80%;
+            max-width: 450px;
+            height: auto;
+            background-color: $light;
+            // position: absolute;
+            top: 0px;
+            right: 0px;
+            // left: 100px;
+            .close {
+                padding: 18px 32px;
+                border-bottom: 1px solid rgba($dark, 0.2);
+                font-size: 18px;
+                text-align: right;
+            }
+            .links {
+                padding-bottom: 36px;
+                .link {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 21px;
+                    padding: 18px 32px;
+                    border-bottom: 1px solid rgba($dark, 0.2);
+                }
+            }
+            .center {
+                padding-bottom: 64px;
+                .dropdown {
+                    margin: 0px auto 30px;
+                }
+                text-align: center;
+                .btn {
+                    margin: 12px auto;
+                }
+                .btn2 {
+                    margin: 12px auto;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background: $light;
+                    border: 2px solid $dark;
+                    font-weight: 600;
+                    color: $dark;
+                    width: 120px;
+                    height: 44px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+}
+
+// Button
+.btn {
+    height: 64px;
+    width: 188px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: $dark2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $light;
+
+    @media (max-width: $mob) {
+        width: 120px;
+        height: 44px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+// Footer
+.footer {
+    background: $dark2;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 6.5% 100px;
+    @media (max-width: $mob) {
+        padding: 32px 24px 100px;
+        flex-direction: column;
+    }
+
+    .box {
+        flex: 0.3;
+    }
+    .box:first-child {
+        flex: 0.4;
+    }
+    .brand-name {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: $light;
+        padding: 16px 0 0;
+        @media (max-width: $mob) {
+            padding: 0;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    .icons {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        margin-top: 64px;
+        font-size: 20px;
+        color: $light;
+        @media (max-width: $mob) {
+            margin-top: 28px;
+            margin-bottom: 24px;
+            font-size: 18px;
+        }
+    }
+    .heading {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: $light;
+        padding-top: 36px;
+        @media (max-width: $mob) {
+            font-size: 18px;
+            line-height: 21px;
+            padding-top: 28px;
+        }
+    }
+    .sub-heading {
+        font-size: 18px;
+        line-height: 21px;
+        color: $light;
+        padding-top: 20px;
+        @media (max-width: $mob) {
+            font-size: 16px;
+            line-height: 19px;
+            padding-top: 8px;
+        }
+    }
+}
+
+// Hire me section
+.hire-me-section {
+    margin: 80px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 84px 0 84px 90px;
+    @media (max-width: $mob) {
+        margin: 64px 0;
+        padding: 36px 24px;
+        flex-direction: column;
+    }
+    .content {
+        flex: 0.5;
+        border-right: 10px solid $dark;
+        padding-right: 64px;
+        margin-right: 64px;
+        text-align: left;
+        @media (max-width: $mob) {
+            padding: 0px 0px 40px;
+            margin: 0px 0px 40px;
+            border-right: none;
+            border-bottom: 10px solid $dark;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            margin-bottom: 32px;
+            @media (max-width: $mob) {
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 16px;
+            }
+        }
+        .body {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 42px;
+            letter-spacing: 0.03em;
+            color: $dark3;
+            margin-bottom: 40px;
+            @media (max-width: $mob) {
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+    }
+    .image {
+        flex: 0.5;
+        background-color: $dark3;
+        min-height: 280px;
+        width: auto;
+    }
+}
+
+// custom width
+.width1 {
+    width: 80%;
+}
+.width2 {
+    width: 60%;
+}
+.width3 {
+    width: 45%;
+}
+
+// Image bg fill
+.bg-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Background color yellow
+.bg-yellow {
+    background: rgba($yellow, 0.3);
+}
+
+// Home Page
+.home-page {
+    .hero-section {
+        margin: 0px 0px 80px;
+        padding-left: 100px;
+        position: relative;
+        height: 800px;
+        display: flex;
+        overflow: hidden;
+        @media (max-width: $mob) {
+            display: none;
+        }
+        .lightbulb {
+            position: absolute;
+            top: -10px;
+            bottom: 80px;
+            left: -30%;
+            right: auto;
+            z-index: -1;
+        }
+        .content {
+            flex: 0.5;
+            padding: 80px 100px 0 0;
+            .greeting {
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 56px;
+                color: $dark3;
+            }
+            .name {
+                font-weight: bold;
+                font-size: 96px;
+                line-height: 113px;
+                color: $dark2;
+                margin-top: 42px;
+                width: 500px;
+            }
+            .profession {
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 42px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: $dark3;
+                margin-top: 12px;
+            }
+            .intro {
+                font-size: 24px;
+                line-height: 36px;
+                letter-spacing: 0.03em;
+                color: $dark3;
+                margin-top: 44px;
+            }
+            .buttons {
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                padding: 54px 0;
+                .btn2 {
+                    height: 62px;
+                    width: 186px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background: $light;
+                    border: 2px solid $dark;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $dark;
+
+                    @media (max-width: $mob) {
+                        width: 120px;
+                        height: 44px;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+        .hero-image {
+            flex: 0.5;
+            height: 100%;
+            border-radius: 35% 0 0 0;
+            border: 20px solid $dark;
+            border-right: none;
+        }
+    }
+    .about-section {
+        padding: 80px 0;
+        @media (max-width: $mob) {
+            padding: 0;
+            margin: 64px 0px;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            padding-left: 30px;
+            padding-bottom: 15px;
+            margin-left: 90px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            @media (max-width: $mob) {
+                font-size: 24px;
+                line-height: 28px;
+                padding-left: 0px;
+                padding-bottom: 8px;
+                margin-left: 20px;
+            }
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: $mob) {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+            .image {
+                flex: 0.5;
+                margin: 50px 60px 60px 0px;
+                min-height: 400px;
+                // height: 100%;
+                width: 100%;
+                @media (max-width: $mob) {
+                    flex: auto;
+                    margin: 32px 0px;
+                }
+            }
+            .body {
+                flex: 0.5;
+                border-left: 10px solid $dark;
+                padding: 50px 90px 60px 60px;
+                font-size: 20px;
+                line-height: 26px;
+                color: $dark3;
+                display: flex;
+                align-items: center;
+                @media (max-width: $mob) {
+                    flex: auto;
+                    border: none;
+                    border-top: 10px solid $dark;
+                    padding: 32px 0px 0px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    .service-section {
+        margin: 40px 0 160px;
+        padding: 84px 0px 84px 90px;
+        @media (max-width: $mob) {
+            margin: 64px 0;
+            padding: 48px 0px 48px 20px;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            padding: 0px 0px 15px 30px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            @media (max-width: $mob) {
+                font-size: 24px;
+                line-height: 28px;
+                padding: 0px 0px 8px 0px;
+            }
+        }
+        .content {
+            padding-right: 90px;
+            padding-top: 28px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            @media (max-width: $mob) {
+                padding: 32px 20px 0px 0px;
+            }
+            .card {
+                flex: 0.3;
+                padding: 0 30px;
+                margin: 30px 0;
+                min-width: 400px;
+                border-right: 1px solid rgba($dark, 0.2);
+                @media (max-width: $mob) {
+                    flex: auto;
+                    margin: 0 0 36px;
+                    padding: 16px;
+                    border: none;
+                    min-width: 100%;
+                    border-bottom: 1px solid rgba($dark, 0.2);
+                }
+                .image {
+                    height: 250px;
+                    width: 100%;
+                    @media (max-width: $mob) {
+                        height: 250px;
+                        max-width: 500px;
+                        margin: auto;
+                    }
+                }
+                .card-body {
+                    margin: 36px 20px 20px;
+                    border-top: 10px solid $dark;
+                    @media (max-width: $mob) {
+                        margin: 36px 20px 0;
+                    }
+                    .title {
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 28px;
+                        text-align: center;
+                        color: $dark;
+                        padding: 28px 0 20px;
+                        @media (max-width: $mob) {
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
+                    }
+                    .body {
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+                        letter-spacing: 0.03em;
+                        color: $dark3;
+                    }
+                }
+            }
+            .card:nth-child(3),
+            .card:nth-child(5) {
+                border: none;
+                @media (max-width: $mob) {
+                    border-bottom: 1px solid rgba($dark, 0.2);
+                }
+            }
+        }
+    }
+    .gallery-section {
+        margin: 160px 0;
+        padding-left: 90px;
+        @media (max-width: $mob) {
+            margin: 64px 0;
+            padding-left: 16px;
+            display: none;
+        }
+        .heading {
+            padding-left: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            @media (max-width: $mob) {
+                margin-left: 4px;
+                padding-left: 0px;
+                padding-bottom: 8px;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .content {
+            margin-right: 90px;
+            margin-top: 52px;
+            display: grid;
+            background: rgba($dark, 0.2);
+            grid-template-columns: repeat(22, minmax(30px, auto));
+            grid-template-rows: repeat(30, minmax(40px, auto));
+            gap: 1px;
+            @media (max-width: $mob) {
+                margin-right: 16px;
+                margin-top: 32px;
+            }
+            .image {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .testimonial-section {
+        margin: 160px 0px;
+        padding-left: 90px;
+        @media (max-width: $mob) {
+            margin: 64px 0;
+            padding-left: 16px;
+        }
+        .heading {
+            padding-left: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            @media (max-width: $mob) {
+                padding-left: 0px;
+                padding-bottom: 8px;
+                margin-left: 4px;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .content {
+            padding: 32px 90px 32px 0px;
+            @media (max-width: $mob) {
+                padding: 32px 16px 32px 0px;
+            }
+            .react-multiple-carousel__arrow--left {
+                left: 0px;
+                z-index: 9;
+            }
+            .react-multiple-carousel__arrow--right {
+                z-index: 9;
+                right: 0px;
+            }
+            .react-multi-carousel-dot-list {
+                bottom: 0px;
+                z-index: -1;
+                @media (max-width: $mob) {
+                    top: 0px;
+                }
+            }
+            .react-multi-carousel-dot {
+                button {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50px;
+                    background-color: #c4c4c4;
+                    border: none;
+                }
+            }
+            .react-multi-carousel-dot--active {
+                button {
+                    width: 24px;
+                    height: 8px;
+                    background-color: $dark3;
+                    border: none;
+                    border-radius: 50px;
+                }
+            }
+            .card {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0;
+                .box {
+                    padding: 24px 24px 40px;
+                    border: 2px solid $dark;
+                    max-width: 600px;
+                    min-height: 250px;
+                    @media (max-width: $mob) {
+                        padding: 16px;
+                        margin: 0 10px;
+                    }
+                    .user {
+                        display: flex;
+                        align-items: center;
+                        .profile {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 100%;
+                            @media (max-width: $mob) {
+                                width: 45px;
+                                height: 45px;
+                            }
+                        }
+                        .name {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 23px;
+                            color: $dark2;
+                            margin-left: 10px;
+                        }
+                    }
+                    .review {
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: $dark3;
+                        margin-left: 70px;
+                        @media (max-width: $mob) {
+                            margin-left: 0px;
+                            font-size: 16px;
+                            line-height: 19px;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// About Page
+.about-page {
+    .hero-section {
+        margin: 80px 0px;
+        padding: 0px 0px 0px 120px;
+        position: relative;
+        @media (max-width: $mob) {
+            padding: 0px;
+            margin-bottom: 64px;
+        }
+
+        .heading {
+            font-weight: bold;
+            font-size: 96px;
+            line-height: 113px;
+            color: $dark2;
+            margin-bottom: 50px;
+            @media (max-width: $mob) {
+                font-size: 48px;
+                line-height: 56px;
+                margin: 0px 24px;
+            }
+        }
+        .intro {
+            font-size: 18px;
+            line-height: 42px;
+            color: $dark3;
+            padding-top: 32px;
+            @media (max-width: $mob) {
+                width: 100%;
+                padding: 24px 20px 0px;
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+        .hero-images {
+            // background-color: $dark2;
+            position: absolute;
+            top: auto;
+            bottom: 90px;
+            left: auto;
+            right: 0px;
+            width: 50%;
+            height: 70%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+            @media (max-width: $mob) {
+                position: static;
+                height: 300px;
+                width: 100%;
+                justify-content: center;
+                margin-top: 24px;
+            }
+
+            .img1 {
+                flex: 0.35;
+                height: 100%;
+                border: 16px solid $dark;
+                border-right: none;
+                @media (max-width: $mob) {
+                    border: none;
+                    flex: 0.33;
+                    height: 100%;
+                }
+            }
+            .img2 {
+                flex: 0.3;
+                height: 70%;
+                border: 16px solid $dark;
+                border-right: none;
+                @media (max-width: $mob) {
+                    border: none;
+                    flex: 0.33;
+                    height: 100%;
+                }
+            }
+            .img3 {
+                flex: 0.3;
+                height: 40%;
+                border: 16px solid $dark;
+                border-right: none;
+                @media (max-width: $mob) {
+                    border: none;
+                    flex: 0.33;
+                    height: 100%;
+                }
+            }
+        }
+        .social-icons {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 80px;
+            @media (max-width: $mob) {
+                margin-top: 50px;
+                padding: 0px 20px;
+            }
+
+            .sub-heading {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 28px;
+                color: $dark2;
+            }
+            .icons {
+                margin-top: 40px;
+                color: $dark2;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: $mob) {
+                    margin-top: 32px;
+                    margin-right: 15%;
+                }
+            }
+        }
+    }
+    .contact-section {
+        display: flex;
+        justify-content: center;
+        padding: 64px 12%;
+        margin: 80px 0;
+        @media (max-width: $mob) {
+            padding: 16px 60px;
+            margin: 32px 0;
+            flex-direction: column;
+        }
+
+        .card {
+            flex: 0.33;
+            text-align: center;
+            border-right: 10px solid $dark2;
+            padding: 0px 30px;
+            @media (max-width: $mob) {
+                border-right: none;
+                border-bottom: 10px solid $dark2;
+                padding: 36px 0;
+            }
+            .icon {
+                height: 120px;
+                width: 120px;
+                border-radius: 100%;
+                border: 2px solid $dark;
+                margin: auto;
+                background-color: $light;
+                font-size: 48px;
+                color: $dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media (max-width: $mob) {
+                    height: 82px;
+                    width: 82px;
+                    font-size: 28px;
+                }
+            }
+            .heading {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 28px;
+                color: $dark;
+                padding: 20px 0;
+            }
+            .sub-heading {
+                font-size: 20px;
+                line-height: 23px;
+                color: $dark;
+                padding-bottom: 16px;
+            }
+        }
+        .card:last-child {
+            border: none;
+        }
+    }
+    .skill-section {
+        padding: 80px 0px 80px 90px;
+        @media (max-width: $mob) {
+            padding: 32px 0px 32px 20px;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            padding-left: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            @media (max-width: $mob) {
+                padding-bottom: 8px;
+                padding-left: 0px;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 24px;
+            padding-right: 90px;
+            justify-content: center;
+            @media (max-width: $mob) {
+                flex-direction: column;
+                padding-right: 20px;
+                align-items: center;
+            }
+            .card {
+                border: 1px solid $dark;
+                margin: 30px;
+                width: 28%;
+                max-width: 500px;
+                @media (max-width: $mob) {
+                    width: auto;
+                    margin: 20px 0;
+                }
+                .card-image {
+                    width: 100%;
+                    min-height: 250px;
+                    background-color: $dark3;
+                }
+                .card-heading {
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 32px;
+                    text-align: center;
+                    color: $dark2;
+                    padding: 32px 0 16px;
+                    @media (max-width: $mob) {
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 20px 0 8px;
+                    }
+                }
+                .card-body {
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+                    color: $dark3;
+                    padding: 0px 16px 20px;
+                    @media (max-width: $mob) {
+                        font-size: 18px;
+                        line-height: 21px;
+                        padding: 0px 10px 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Service page
+.service-page {
+    .hero-section {
+        margin: 80px 0;
+        padding: 0px 0px 0px 90px;
+        @media (max-width: $mob) {
+            margin: 64px 0px;
+            padding: 0px 20px;
+        }
+        .hero-heading {
+            font-weight: bold;
+            font-size: 96px;
+            line-height: 113px;
+            color: $dark2;
+            margin-left: 30px;
+            @media (max-width: $mob) {
+                font-size: 48px;
+                line-height: 56px;
+                margin: 0px 8px;
+            }
+        }
+        .section {
+            margin-top: 80px;
+            position: relative;
+            @media (max-width: $mob) {
+                margin: 64px 0px;
+            }
+            .heading {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 42px;
+                border-bottom: 1px solid rgba($dark3, 0.2);
+                padding: 0px 0px 15px 30px;
+                @media (max-width: $mob) {
+                    padding-bottom: 8px;
+                    padding-left: 0px;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            .content {
+                width: 45%;
+                padding-bottom: 260px;
+                @media (max-width: $mob) {
+                    width: 100%;
+                    padding-bottom: 32px;
+                }
+                .sub-heading {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 42px;
+                    color: $dark2;
+                    margin: 32px 0px 16px;
+                    @media (max-width: $mob) {
+                        font-size: 18px;
+                        line-height: 32px;
+                        margin-top: 24px;
+                    }
+                }
+                .body {
+                    font-size: 18px;
+                    line-height: 42px;
+                    color: $dark3;
+                    @media (max-width: $mob) {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                }
+            }
+            .hero-image {
+                position: absolute;
+                bottom: auto;
+                top: -100px;
+                left: auto;
+                right: 100px;
+                @media (max-width: $mob) {
+                    position: static;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .service-section {
+        margin: 80px 0px;
+        padding-left: 90px;
+        @media (max-width: $mob) {
+            margin: 64px 0px;
+            padding-left: 20px;
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            padding-bottom: 15px;
+            padding-left: 30px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            @media (max-width: $mob) {
+                font-size: 24px;
+                line-height: 28px;
+                padding-left: 0px;
+                padding-bottom: 8px;
+            }
+        }
+
+        .content {
+            padding-top: 24px;
+            padding-right: 90px;
+            @media (max-width: $mob) {
+                padding-right: 20px;
+                padding-top: 28px;
+            }
+            .card {
+                display: flex;
+                position: relative;
+                justify-content: space-evenly;
+                padding: 75px 30px;
+                @media (max-width: $mob) {
+                    padding: 56px 0px;
+                    flex-direction: column !important;
+                }
+                .float {
+                    font-weight: bold;
+                    font-size: 288px;
+                    line-height: 288px;
+                    color: rgba($yellow, 0.5);
+                    position: absolute;
+                    left: 40px;
+                    top: -50px;
+                    right: auto;
+                    bottom: auto;
+                    @media (max-width: $mob) {
+                        font-size: 164px;
+                        line-height: 164px;
+                        left: -10px !important;
+                        top: -20px;
+                    }
+                }
+                .image {
+                    flex: 0.4;
+                    background-color: $dark3;
+                    @media (max-width: $mob) {
+                        flex: auto;
+                        margin: 0px 30px;
+                        width: 90%;
+                        height: 200px;
+                    }
+                }
+                .card-body {
+                    flex: 0.4;
+                    padding-bottom: 50px;
+                    @media (max-width: $mob) {
+                        flex: auto;
+                        padding-bottom: 0px;
+                    }
+                    .sub-heading {
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: $dark2;
+                        margin: 20px 0px;
+                        @media (max-width: $mob) {
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
+                    }
+                    .body {
+                        font-size: 18px;
+                        line-height: 42px;
+                        color: $dark3;
+                        @media (max-width: $mob) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+            .card:nth-child(even) {
+                flex-direction: row-reverse;
+                .float {
+                    left: auto;
+                    right: 50px;
+                }
+            }
+        }
+    }
+}

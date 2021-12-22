@@ -1,204 +1,329 @@
 import React from "react";
 import Image from "next/image";
-import style from "./HomePage.module.css";
+import suitcase from "../public/Suitcase.svg";
+import lightbulb from "../public/Lightbulb.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import lightbulb from "../public/Lightbulb.svg";
-
-const HomePage = (props) => {
-  const HeroSection = (props) => {
-    return (
-      <div className={style.hero_section}>
-        <div className={style.lightbulb}>
+const url =
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdvcmtlcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60";
+const url2 =
+  "https://images.unsplash.com/photo-1614213951697-a45781262acf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d29ya2VyfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60";
+const galleryData = [
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "1",
+    col_end: "10",
+    row_start: "1",
+    row_end: "10",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "10",
+    col_end: "15",
+    row_start: "1",
+    row_end: "7",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "15",
+    col_end: "23",
+    row_start: "1",
+    row_end: "9",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "1",
+    col_end: "10",
+    row_start: "10",
+    row_end: "15",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "10",
+    col_end: "15",
+    row_start: "7",
+    row_end: "15",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "15",
+    col_end: "23",
+    row_start: "9",
+    row_end: "15",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "1",
+    col_end: "14",
+    row_start: "15",
+    row_end: "23",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "14",
+    col_end: "23",
+    row_start: "15",
+    row_end: "22",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "1",
+    col_end: "7",
+    row_start: "23",
+    row_end: "31",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "7",
+    col_end: "14",
+    row_start: "23",
+    row_end: "31",
+  },
+  {
+    url: "https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4=",
+    col_start: "14",
+    col_end: "23",
+    row_start: "22",
+    row_end: "31",
+  },
+];
+const responsive = {
+  web: {
+    breakpoint: { max: 4000, min: 500 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 500, min: 0 },
+    items: 1,
+  },
+};
+const reviews = [
+  {
+    url: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Robert jr.",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Michael faraday",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Robert jr.",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Michael faraday",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Robert jr.",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+    name: "Michael faraday",
+    review_msg:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
+  },
+];
+const HomePage = () => {
+  return (
+    <div className="home-page">
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="lightbulb">
           <Image src={lightbulb} alt="lightbulb" />
         </div>
-        <div className={style.hero_content}>
-          <div className={style.hero_body}>
-            <div className={style.greeting}>{props.greeting}</div>
-            <div className={style.name}>{props.name}</div>
-            <div className={style.profession}>{props.profession}</div>
-            <div className={style.intro}>{props.intro}</div>
-            <div className={style.buttons}>
-              <div className={style.hire_me}>{props.button.hire_me.name}</div>
-              <div className={style.my_work}>{props.button.my_work.name}</div>
+        <div className="content">
+          <div className="greeting">Hello,</div>
+          <div className="name">I&apos;m Ivan Smith</div>
+          <div className="profession">Professional renovator</div>
+          <div className="intro">
+            Hey guys, have a look at my work and designs on my website.
+            <br />
+            Don&apos;t forget to look into my previous projects.
+          </div>
+          <div className="buttons">
+            <div className="btn">
+              <Image src={suitcase} alt="Suitcase" />
+              Hire me
+            </div>
+            <div className="btn2">My work</div>
+          </div>
+        </div>
+        <div
+          className="hero-image bg-img"
+          style={{ backgroundImage: "url(" + url + ")" }}
+        />
+      </div>
+
+      {/* About Section */}
+      <div className="about-section">
+        <div className="heading">About me</div>
+        <div className="content">
+          <div
+            className="image bg-img"
+            style={{ backgroundImage: "url(" + url2 + ")" }}
+          />
+          <div className="body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
+            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
+            sit faucibus massa. Integer blandit quisque rutrum quis mauris
+            blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas
+            posuere id enim quis leo. Tortor consectetur egestas dapibus non. Mi
+            diam etiam nunc ornare dui, vel odio. Placerat ultricies nisl risus
+            risus malesuada in massa fringilla amet. Diam risus mi, ut et,
+            luctus risus lorem ac. Sapien purus varius semper morbi auctor at
+            non a. Hendrerit morbi at est commodo neque rutrum massa. Morbi
+            tortor lectus pellentesque a amet. Fames leo fames feugiat bibendum
+            felis augue est. Felis sem tristique.
+          </div>
+        </div>
+      </div>
+
+      {/* Service Section */}
+      <div className="service-section bg-yellow">
+        <div className="heading">Things I do</div>
+        <div className="content">
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{ backgroundImage: "url(" + url2 + ")" }}
+            />
+            <div className="card-body">
+              <div className="title">Service 1</div>
+              <div className="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                rutrum viverra bibendum fringilla sed dolor. Neque porta
+                elementum erat vitae cursus at. Volutpat,
+              </div>
             </div>
           </div>
-          <div
-            className={style.hero_image}
-            style={{
-              backgroundImage:
-                "url(https://images.unsplash.com/photo-1564182842519-8a3b2af3e228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3RydWN0aW9uJTIwd29ya2VyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60)",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{ backgroundImage: "url(" + url2 + ")" }}
+            />
+            <div className="card-body">
+              <div className="title">Service 1</div>
+              <div className="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                rutrum viverra bibendum fringilla sed dolor. Neque porta
+                elementum erat vitae cursus at. Volutpat,
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{ backgroundImage: "url(" + url2 + ")" }}
+            />
+            <div className="card-body">
+              <div className="title">Service 1</div>
+              <div className="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                rutrum viverra bibendum fringilla sed dolor. Neque porta
+                elementum erat vitae cursus at. Volutpat,
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{ backgroundImage: "url(" + url2 + ")" }}
+            />
+            <div className="card-body">
+              <div className="title">Service 1</div>
+              <div className="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                rutrum viverra bibendum fringilla sed dolor. Neque porta
+                elementum erat vitae cursus at. Volutpat,
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{ backgroundImage: "url(" + url2 + ")" }}
+            />
+            <div className="card-body">
+              <div className="title">Service 1</div>
+              <div className="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                rutrum viverra bibendum fringilla sed dolor. Neque porta
+                elementum erat vitae cursus at. Volutpat,
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  };
-  const AboutMeSection = (props) => {
-    return (
-      <div className={style.section}>
-        <div className={style.section_heading}>{props.heading}</div>
-        <div
-          className={style.section_content}
-          style={{
-            padding: "0",
-            paddingRight: "90px",
-            paddingBottom: "100px",
-            alignItems: "center",
-          }}
-        >
-          <div className={style.image}>
-            <Image src={props.src} alt="about_me_png" />
-          </div>
-          <hr className={style.verticalLine} />
-          <div className={style.content_body} style={{ width: "50%" }}>
-            {props.content}
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const ThingsIDoSection = (props) => {
-    return (
-      <div
-        className={style.section}
-        style={{ background: "rgba(231, 223, 34, 0.1)" }}
-      >
-        <div className={style.section_heading}>{props.heading}</div>
-        <div className={style.section_content} style={{ alignItems: "center" }}>
-          {props.services.map((service, key) => {
+
+      {/* Gallery Section */}
+      <div className="gallery-section">
+        <div className="heading">Work I have done</div>
+        <div className="content">
+          {galleryData.map((image, key) => {
             return (
-              <Card
+              <div
                 key={key}
-                img={service.img}
-                name={service.name}
-                text={service.text}
+                className="image bg-img"
+                style={{
+                  backgroundImage: "url(" + image.url + ")",
+                  gridColumnStart: image.col_start,
+                  gridColumnEnd: image.col_end,
+                  gridRowStart: image.row_start,
+                  gridRowEnd: image.row_end,
+                  border: "10px solid #ffffff",
+                }}
               />
             );
           })}
         </div>
       </div>
-    );
-  };
-  const Card = (props) => {
-    return (
-      <div className={style.card}>
-        <div className={style.card_img}>
-          <Image src={props.img} alt={props.name} />
-        </div>
-        <hr className={style.hr} />
-        <div className={style.content_heading}>{props.name}</div>
-        <div className={style.content_body} style={{ fontSize: "16px" }}>
-          {props.text}
-        </div>
-      </div>
-    );
-  };
-  const Gallery = (props) => {
-    const GalleryImage = (props, key) => {
-      return (
-        <div
-          key={key}
-          style={{
-            backgroundImage: "url(" + props.url + ")",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            gridColumnStart: props.col_start,
-            gridColumnEnd: props.col_end,
-            gridRowStart: props.row_start,
-            gridRowEnd: props.row_end,
-            border: "10px solid #ffffff",
-          }}
-        />
-      );
-    };
-    return (
-      <div className={style.section}>
-        <div className={style.section_heading}>{props.heading}</div>
-        <div className={style.section_content} style={{ display: "block" }}>
-          <div className={style.gallery}>
-            {props.galleryData.map((image, key) => {
-              return GalleryImage(image, key);
-            })}
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-  const ReviewCard = (props, key) => {
-    return (
-      <div className={style.review_card} key={key}>
-        <div className={style.box}>
-          <div className={style.user}>
-            <div
-              className={style.user_profile}
-              style={{
-                backgroundImage: "url(" + props.url + ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div className={style.user_name}>{props.name}</div>
-          </div>
-          <div className={style.review}>{props.review_msg}</div>
-        </div>
-      </div>
-    );
-  };
-  const Testimonials = (props) => {
-    return (
-      <div className={style.section}>
-        <div className={style.section_heading}>
-          <div>{props.heading}</div>
-        </div>
-        <div className={style.section_content} style={{ display: "block" }}>
+
+      {/* Testimonial Section */}
+      <div className="testimonial-section">
+        <div className="heading">Testimonials</div>
+        <div className="content">
           <Carousel
             responsive={responsive}
-            swipeable={false}
-            draggable={false}
-            showDots={false}
+            swipeable={true}
+            draggable={true}
+            showDots={true}
             infinite={true}
             autoPlaySpeed={1000}
             keyBoardControl={true}
           >
-            {props.reviews.map((e, key) => {
-              return ReviewCard(e, key);
+            {reviews.map((e, key) => {
+              return (
+                <div className="card" key={key}>
+                  <div className="box">
+                    <div className="user">
+                      <div
+                        className="profile bg-img"
+                        style={{
+                          backgroundImage: "url(" + e.url + ")",
+                        }}
+                      ></div>
+                      <div className="name">{e.name}</div>
+                    </div>
+                    <div className="review">{e.review_msg}</div>
+                  </div>
+                </div>
+              );
             })}
           </Carousel>
         </div>
       </div>
-    );
-  };
-  return (
-    <div>
-      {HeroSection(props.data[0])}
-      {AboutMeSection(props.data[1])}
-      {ThingsIDoSection(props.data[2])}
-      {Gallery(props.data[3])}
-      {Testimonials(props.data[4])}
     </div>
   );
 };

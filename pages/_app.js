@@ -1,12 +1,13 @@
 import { Fragment } from "react";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "../styles/globals.css";
-import Footer from "../components/global/Footer";
-import Header from "../components/global/Header";
+import "../styles/styles.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
-      <Header />
+      <Navbar />
       <Component {...pageProps} />
       <Footer />
     </Fragment>
