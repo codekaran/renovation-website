@@ -8,52 +8,35 @@ import {
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import HiremeSection from "./HiremeSection";
+import parse from "html-react-parser";
 
-const url =
-  "https://images.unsplash.com/photo-1597476817120-9b82cef5ce82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmVub3ZhdGlvbnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60";
-const AboutPage = () => {
+const AboutPage = (props) => {
   return (
     <div className="about-page">
       {/* Hero Section */}
       <div className="hero-section">
-        <div className="heading">About me</div>
+        <div className="heading">{parse(props.data.hero.heading)}</div>
         <div>
-          <div className="intro width1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
-            sit faucibus massa. Integer blandit quisque rutrum quis mauris
-            blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas
-            posuere id enim quis leo. Tortor consectetur egestas dapibus non.
-          </div>
-          <div className="intro width2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
-            sit faucibus massa. Integer blandit quisque rutrum quis mauris
-            blandit amet.
-          </div>
-          <div className="intro width3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh
-            sit faucibus massa. Integer blandit quisque rutrum quis mauris
-            blandit amet.
-          </div>
+          <div className="intro width1">{parse(props.data.hero.intro1)}</div>
+          <div className="intro width2">{parse(props.data.hero.intro2)}</div>
+          <div className="intro width3">{parse(props.data.hero.intro3)}</div>
         </div>
         <div className="hero-images">
           <div
             className="bg-img img1"
-            style={{ backgroundImage: "url(" + url + ")" }}
+            style={{ backgroundImage: "url(" + props.data.hero.image1 + ")" }}
           ></div>
           <div
             className="bg-img img2"
-            style={{ backgroundImage: "url(" + url + ")" }}
+            style={{ backgroundImage: "url(" + props.data.hero.image2 + ")" }}
           ></div>
           <div
             className="bg-img img3"
-            style={{ backgroundImage: "url(" + url + ")" }}
+            style={{ backgroundImage: "url(" + props.data.hero.image3 + ")" }}
           ></div>
         </div>
         <div className="social-icons">
-          <div className="sub-heading">Follow me on</div>
+          <div className="sub-heading">{parse(props.data.hero.social)}</div>
           <div className="icons">
             <FaFacebookF />
             <AiFillInstagram />
@@ -69,97 +52,63 @@ const AboutPage = () => {
           <div className="icon">
             <FaPhoneAlt />
           </div>
-          <div className="heading">Contact no.</div>
-          <div className="sub-heading">+362 2522065132</div>
+          <div className="heading">
+            {parse(props.data.contact.phone.heading)}
+          </div>
+          <div className="sub-heading">
+            {parse(props.data.contact.phone.subHeading)}
+          </div>
         </div>
         <div className="card">
           <div className="icon">
             <MdEmail />
           </div>
-          <div className="heading">Email address</div>
-          <div className="sub-heading">hello@gmail.com</div>
+          <div className="heading">
+            {parse(props.data.contact.email.heading)}
+          </div>
+          <div className="sub-heading">
+            {parse(props.data.contact.email.subHeading)}
+          </div>
         </div>
         <div className="card">
           <div className="icon">
             <MdLocationOn />
           </div>
-          <div className="heading">Address</div>
+          <div className="heading">
+            {parse(props.data.contact.address.heading)}
+          </div>
           <div className="sub-heading">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut
-            habitant eget ut nunc
+            {parse(props.data.contact.address.subHeading)}
           </div>
         </div>
       </div>
 
       {/* Skills section */}
       <div className="skill-section">
-        <div className="heading">Skills I have</div>
+        <div className="heading">{parse(props.data.skill.heading)}</div>
         <div className="content">
-          <div className="card">
-            <div
-              className="card-image bg-img"
-              style={{ backgroundImage: "url(" + url + ")" }}
-            />
-            <div className="card-heading">Skill 1</div>
-            <div className="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
-              erat vitae cursus at. Volutpat,
-            </div>
-          </div>
-          <div className="card">
-            <div
-              className="card-image bg-img"
-              style={{ backgroundImage: "url(" + url + ")" }}
-            />
-            <div className="card-heading">Skill 1</div>
-            <div className="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
-              erat vitae cursus at. Volutpat,
-            </div>
-          </div>
-          <div className="card">
-            <div
-              className="card-image bg-img"
-              style={{ backgroundImage: "url(" + url + ")" }}
-            />
-            <div className="card-heading">Skill 1</div>
-            <div className="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
-              erat vitae cursus at. Volutpat,
-            </div>
-          </div>
-          <div className="card">
-            <div
-              className="card-image bg-img"
-              style={{ backgroundImage: "url(" + url + ")" }}
-            />
-            <div className="card-heading">Skill 1</div>
-            <div className="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
-              erat vitae cursus at. Volutpat,
-            </div>
-          </div>
-          <div className="card">
-            <div
-              className="card-image bg-img"
-              style={{ backgroundImage: "url(" + url + ")" }}
-            />
-            <div className="card-heading">Skill 1</div>
-            <div className="card-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              rutrum viverra bibendum fringilla sed dolor. Neque porta elementum
-              erat vitae cursus at. Volutpat,
-            </div>
-          </div>
+          {props.data.skill.skills.map((e, key) => {
+            return (
+              <div className="card" key={key}>
+                <div
+                  className="card-image bg-img"
+                  style={{ backgroundImage: "url(" + e.image + ")" }}
+                />
+                <div className="card-heading">{parse(e.heading)}</div>
+                <div className="card-body">{parse(e.body)}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
       {/* Hire me section */}
-      <HiremeSection />
+      <HiremeSection
+        heading={props.data.hireme.heading}
+        body={props.data.hireme.body}
+        image={props.data.hireme.image}
+        button={props.data.hireme.button}
+      />
     </div>
   );
 };
