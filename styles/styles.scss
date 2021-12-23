@@ -6,7 +6,18 @@ $dark3: #343434;
 $light: #ffffff;
 $yellow: #e7df22;
 $mob: 990px;
-
+@keyframes animation {
+    from {
+        opacity: 0%;
+        top: -100%;
+        // right: -100%;
+    }
+    to {
+        opacity: 100%;
+        top: 0px;
+        // right: 0px;
+    }
+}
 // Navbar
 .navbar {
     height: 90px;
@@ -96,6 +107,7 @@ $mob: 990px;
         top: 0px;
         left: 0px;
         background-color: rgba($dark, 0.3);
+
         .box {
             width: 80%;
             max-width: 450px;
@@ -104,6 +116,9 @@ $mob: 990px;
             position: absolute;
             top: 0px;
             right: 0px;
+            animation-name: animation;
+            animation-duration: 0.5s;
+
             .close {
                 padding: 18px 32px;
                 border-bottom: 1px solid rgba($dark, 0.2);
