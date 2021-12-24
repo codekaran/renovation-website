@@ -24,15 +24,15 @@ const AboutPage = (props) => {
         <div className="hero-images">
           <div
             className="bg-img img1"
-            style={{ backgroundImage: "url(" + props.data[0].Image1 + ")" }}
+            style={{ backgroundImage: "url(" + props.images[0] + ")" }}
           ></div>
           <div
             className="bg-img img2"
-            style={{ backgroundImage: "url(" + props.data[0].Image2 + ")" }}
+            style={{ backgroundImage: "url(" + props.images[0] + ")" }}
           ></div>
           <div
             className="bg-img img3"
-            style={{ backgroundImage: "url(" + props.data[0].Image3 + ")" }}
+            style={{ backgroundImage: "url(" + props.images[0] + ")" }}
           ></div>
         </div>
         <div className="social-icons">
@@ -52,29 +52,27 @@ const AboutPage = (props) => {
           <div className="icon">
             <FaPhoneAlt />
           </div>
-          <div className="heading">{parse(props.data[1].phone.Heading)}</div>
+          <div className="heading">{parse(props.data[1].PhoneHeading)}</div>
           <div className="sub-heading">
-            {parse(props.data[1].phone.SubHeading)}
+            {parse(props.data[1].PhoneSubHeading)}
           </div>
         </div>
         <div className="card">
           <div className="icon">
             <MdEmail />
           </div>
-          <div className="heading">{parse(props.data[1].email.Heading)}</div>
+          <div className="heading">{parse(props.data[1].EmailHeading)}</div>
           <div className="sub-heading">
-            {parse(props.data[1].email.SubHeading)}
+            {parse(props.data[1].EmailSubHeading)}
           </div>
         </div>
         <div className="card">
           <div className="icon">
             <MdLocationOn />
           </div>
-          <div className="heading">
-            {parse(props.data[1].address.Heading)}
-          </div>
+          <div className="heading">{parse(props.data[1].AddressHeading)}</div>
           <div className="sub-heading">
-            {parse(props.data[1].address.SubHeading)}
+            {parse(props.data[1].AddressSubHeading)}
           </div>
         </div>
       </div>
@@ -88,7 +86,7 @@ const AboutPage = (props) => {
             <div
               className="card-image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage1 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-heading">
@@ -101,7 +99,7 @@ const AboutPage = (props) => {
             <div
               className="card-image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage2 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-heading">
@@ -114,7 +112,7 @@ const AboutPage = (props) => {
             <div
               className="card-image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage3 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-heading">
@@ -127,7 +125,7 @@ const AboutPage = (props) => {
             <div
               className="card-image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage4 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-heading">
@@ -140,7 +138,7 @@ const AboutPage = (props) => {
             <div
               className="card-image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage5 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-heading">
@@ -155,7 +153,7 @@ const AboutPage = (props) => {
       <HiremeSection
         heading={props.data[3].Heading}
         body={props.data[3].Intro}
-        image={props.data[3].Image}
+        image={props.images[0]}
         button={props.data[3].Button}
       />
     </div>

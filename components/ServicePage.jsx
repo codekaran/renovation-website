@@ -26,7 +26,7 @@ const ServicePage = (props) => {
       <HiremeSection
         heading={props.data[2].Heading}
         body={props.data[2].Intro}
-        image={props.data[2].Image}
+        image={props.images[0]}
         button={props.data[2].Button}
       />
 
@@ -40,7 +40,7 @@ const ServicePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[3].CardImage1 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-body">
@@ -56,7 +56,7 @@ const ServicePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[3].CardImage2 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-body">
@@ -72,7 +72,7 @@ const ServicePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[3].CardImage3 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-body">
@@ -88,7 +88,7 @@ const ServicePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[3].CardImage4 + ")",
+                backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
             <div className="card-body">

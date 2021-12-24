@@ -44,7 +44,7 @@ const HomePage = (props) => {
         </div>
         <div
           className="hero-image bg-img"
-          style={{ backgroundImage: "url(" + props.data[0].Image + ")" }}
+          style={{ backgroundImage: "url(" + props.images[0] + ")" }}
         />
       </div>
 
@@ -54,7 +54,7 @@ const HomePage = (props) => {
         <div className="content">
           <div
             className="image bg-img"
-            style={{ backgroundImage: "url(" + props.data[0].Image + ")" }}
+            style={{ backgroundImage: "url(" + props.images[1] + ")" }}
           />
           <div className="body">{parse(props.data[1].Intro)}</div>
         </div>
@@ -69,7 +69,7 @@ const HomePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage1 + ")",
+                backgroundImage: "url(" + props.images[2] + ")",
               }}
             />
             <div className="card-body">
@@ -82,7 +82,7 @@ const HomePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage2 + ")",
+                backgroundImage: "url(" + props.images[2] + ")",
               }}
             />
             <div className="card-body">
@@ -95,7 +95,7 @@ const HomePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage3 + ")",
+                backgroundImage: "url(" + props.images[2] + ")",
               }}
             />
             <div className="card-body">
@@ -108,7 +108,7 @@ const HomePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage4 + ")",
+                backgroundImage: "url(" + props.images[2] + ")",
               }}
             />
             <div className="card-body">
@@ -121,7 +121,7 @@ const HomePage = (props) => {
             <div
               className="image bg-img"
               style={{
-                backgroundImage: "url(" + props.data[2].CardImage5 + ")",
+                backgroundImage: "url(" + props.images[2] + ")",
               }}
             />
             <div className="card-body">
@@ -136,7 +136,7 @@ const HomePage = (props) => {
       <div className="gallery-section">
         <div className="heading">{parse(props.data[3].Heading)}</div>
         <div className="content-web">
-          {props.data[3].webView.map((image, key) => {
+          {props.gallery.webView.map((image, key) => {
             return (
               <div
                 key={key}
@@ -154,7 +154,7 @@ const HomePage = (props) => {
           })}
         </div>
         <div className="content-mob">
-          {props.data[3].mobileView.map((image, key) => {
+          {props.gallery.mobileView.map((image, key) => {
             return (
               <div
                 key={key}
@@ -192,10 +192,12 @@ const HomePage = (props) => {
                   <div
                     className="profile bg-img"
                     style={{
-                      backgroundImage: "url(" + props.data[4].CardImage1 + ")",
+                      backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">{parse(props.data[4].CardHeading1)}</div>
+                  <div className="name">
+                    {parse(props.data[4].CardHeading1)}
+                  </div>
                 </div>
                 <div className="review">{parse(props.data[4].CardIntro1)}</div>
               </div>
@@ -206,10 +208,12 @@ const HomePage = (props) => {
                   <div
                     className="profile bg-img"
                     style={{
-                      backgroundImage: "url(" + props.data[4].CardImage2 + ")",
+                      backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">{parse(props.data[4].CardHeading2)}</div>
+                  <div className="name">
+                    {parse(props.data[4].CardHeading2)}
+                  </div>
                 </div>
                 <div className="review">{parse(props.data[4].CardIntro2)}</div>
               </div>
@@ -220,10 +224,12 @@ const HomePage = (props) => {
                   <div
                     className="profile bg-img"
                     style={{
-                      backgroundImage: "url(" + props.data[4].CardImage3 + ")",
+                      backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">{parse(props.data[4].CardHeading3)}</div>
+                  <div className="name">
+                    {parse(props.data[4].CardHeading3)}
+                  </div>
                 </div>
                 <div className="review">{parse(props.data[4].CardIntro3)}</div>
               </div>
@@ -234,10 +240,12 @@ const HomePage = (props) => {
                   <div
                     className="profile bg-img"
                     style={{
-                      backgroundImage: "url(" + props.data[4].CardImage4 + ")",
+                      backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">{parse(props.data[4].CardHeading4)}</div>
+                  <div className="name">
+                    {parse(props.data[4].CardHeading4)}
+                  </div>
                 </div>
                 <div className="review">{parse(props.data[4].CardIntro4)}</div>
               </div>
