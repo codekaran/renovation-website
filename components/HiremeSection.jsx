@@ -11,7 +11,7 @@ const HiremeSection = (props) => {
       <div className="content">
         <div className="heading">{parse(props.heading)}</div>
         <div className="body">{parse(props.body)}</div>
-        <div className="btn">
+        <div className="btn pointer">
           <Image src={suitcase} alt="Suitcase" />
           {parse(props.button)}
         </div>

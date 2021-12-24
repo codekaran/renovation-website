@@ -38,10 +38,10 @@ const AboutPage = (props) => {
         <div className="social-icons">
           <div className="sub-heading">{parse(props.data.hero.social)}</div>
           <div className="icons">
-            <FaFacebookF />
-            <AiFillInstagram />
-            <FaLinkedinIn />
-            <FaTwitter />
+            <FaFacebookF className="pointer"/>
+            <AiFillInstagram className="pointer"/>
+            <FaLinkedinIn className="pointer"/>
+            <FaTwitter className="pointer"/>
           </div>
         </div>
       </div>

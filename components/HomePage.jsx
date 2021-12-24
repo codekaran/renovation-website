@@ -32,11 +32,11 @@ const HomePage = (props) => {
           <div className="profession">{parse(props.data.hero.profession)}</div>
           <div className="intro">{parse(props.data.hero.intro)}</div>
           <div className="buttons">
-            <div className="btn">
+            <div className="btn pointer">
               <Image src={suitcase} alt="Suitcase" />
               {parse(props.data.hero.button1)}
             </div>
-            <div className="btn2">
+            <div className="btn2 pointer">
               <BiBuildingHouse />
               {parse(props.data.hero.button2)}
             </div>

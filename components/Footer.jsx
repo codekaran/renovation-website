@@ -2,17 +2,22 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import parse from "html-react-parser";
+import Link from "next/link";
 
 const Footer = (props) => {
   return (
     <div className="footer">
       <div className="box">
-        <div className="brand-name">{parse(props.data.heading)}</div>
+        <div className="brand-name">
+          <Link href="/" passHref>
+            <span className="pointer">{parse(props.data.heading)}</span>
+          </Link>
+        </div>
         <div className="icons">
-          <FaFacebookF />
-          <AiFillInstagram />
-          <FaLinkedinIn />
-          <FaTwitter />
+          <FaFacebookF className="pointer" />
+          <AiFillInstagram className="pointer" />
+          <FaLinkedinIn className="pointer" />
+          <FaTwitter className="pointer" />
         </div>
       </div>
       <div className="box">

@@ -20,6 +20,10 @@
   }
 }
 
+.pointer:hover {
+  cursor: pointer;
+}
+
 .navbar {
   height: 90px;
   width: 100%;
