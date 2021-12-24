@@ -15,33 +15,33 @@ const AboutPage = (props) => {
     <div className="about-page">
       {/* Hero Section */}
       <div className="hero-section">
-        <div className="heading">{parse(props.data.hero.heading)}</div>
+        <div className="heading">{parse(props.data[0].Heading)}</div>
         <div>
-          <div className="intro width1">{parse(props.data.hero.intro1)}</div>
-          <div className="intro width2">{parse(props.data.hero.intro2)}</div>
-          <div className="intro width3">{parse(props.data.hero.intro3)}</div>
+          <div className="intro width1">{parse(props.data[0].Intro1)}</div>
+          <div className="intro width2">{parse(props.data[0].Intro2)}</div>
+          <div className="intro width3">{parse(props.data[0].Intro3)}</div>
         </div>
         <div className="hero-images">
           <div
             className="bg-img img1"
-            style={{ backgroundImage: "url(" + props.data.hero.image1 + ")" }}
+            style={{ backgroundImage: "url(" + props.data[0].Image1 + ")" }}
           ></div>
           <div
             className="bg-img img2"
-            style={{ backgroundImage: "url(" + props.data.hero.image2 + ")" }}
+            style={{ backgroundImage: "url(" + props.data[0].Image2 + ")" }}
           ></div>
           <div
             className="bg-img img3"
-            style={{ backgroundImage: "url(" + props.data.hero.image3 + ")" }}
+            style={{ backgroundImage: "url(" + props.data[0].Image3 + ")" }}
           ></div>
         </div>
         <div className="social-icons">
-          <div className="sub-heading">{parse(props.data.hero.social)}</div>
+          <div className="sub-heading">{parse(props.data[0].SubHeading)}</div>
           <div className="icons">
-            <FaFacebookF className="pointer"/>
-            <AiFillInstagram className="pointer"/>
-            <FaLinkedinIn className="pointer"/>
-            <FaTwitter className="pointer"/>
+            <FaFacebookF className="pointer" />
+            <AiFillInstagram className="pointer" />
+            <FaLinkedinIn className="pointer" />
+            <FaTwitter className="pointer" />
           </div>
         </div>
       </div>
@@ -52,22 +52,18 @@ const AboutPage = (props) => {
           <div className="icon">
             <FaPhoneAlt />
           </div>
-          <div className="heading">
-            {parse(props.data.contact.phone.heading)}
-          </div>
+          <div className="heading">{parse(props.data[1].phone.Heading)}</div>
           <div className="sub-heading">
-            {parse(props.data.contact.phone.subHeading)}
+            {parse(props.data[1].phone.SubHeading)}
           </div>
         </div>
         <div className="card">
           <div className="icon">
             <MdEmail />
           </div>
-          <div className="heading">
-            {parse(props.data.contact.email.heading)}
-          </div>
+          <div className="heading">{parse(props.data[1].email.Heading)}</div>
           <div className="sub-heading">
-            {parse(props.data.contact.email.subHeading)}
+            {parse(props.data[1].email.SubHeading)}
           </div>
         </div>
         <div className="card">
@@ -75,39 +71,92 @@ const AboutPage = (props) => {
             <MdLocationOn />
           </div>
           <div className="heading">
-            {parse(props.data.contact.address.heading)}
+            {parse(props.data[1].address.Heading)}
           </div>
           <div className="sub-heading">
-            {parse(props.data.contact.address.subHeading)}
+            {parse(props.data[1].address.SubHeading)}
           </div>
         </div>
       </div>
 
       {/* Skills section */}
       <div className="skill-section">
-        <div className="heading">{parse(props.data.skill.heading)}</div>
+        <div className="heading">{parse(props.data[2].Heading)}</div>
         <div className="content">
-          {props.data.skill.skills.map((e, key) => {
-            return (
-              <div className="card" key={key}>
-                <div
-                  className="card-image bg-img"
-                  style={{ backgroundImage: "url(" + e.image + ")" }}
-                />
-                <div className="card-heading">{parse(e.heading)}</div>
-                <div className="card-body">{parse(e.body)}</div>
-              </div>
-            );
-          })}
+          {/* Card 1 */}
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage1 + ")",
+              }}
+            />
+            <div className="card-heading">
+              {parse(props.data[2].CardHeading1)}
+            </div>
+            <div className="card-body">{parse(props.data[2].CardIntro1)}</div>
+          </div>
+          {/* Card 2 */}
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage2 + ")",
+              }}
+            />
+            <div className="card-heading">
+              {parse(props.data[2].CardHeading2)}
+            </div>
+            <div className="card-body">{parse(props.data[2].CardIntro2)}</div>
+          </div>
+          {/* Card 3 */}
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage3 + ")",
+              }}
+            />
+            <div className="card-heading">
+              {parse(props.data[2].CardHeading3)}
+            </div>
+            <div className="card-body">{parse(props.data[2].CardIntro3)}</div>
+          </div>
+          {/* Card 4 */}
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage4 + ")",
+              }}
+            />
+            <div className="card-heading">
+              {parse(props.data[2].CardHeading4)}
+            </div>
+            <div className="card-body">{parse(props.data[2].CardIntro4)}</div>
+          </div>
+          {/* Card 5 */}
+          <div className="card">
+            <div
+              className="card-image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage5 + ")",
+              }}
+            />
+            <div className="card-heading">
+              {parse(props.data[2].CardHeading5)}
+            </div>
+            <div className="card-body">{parse(props.data[2].CardIntro5)}</div>
+          </div>
         </div>
       </div>
 
       {/* Hire me section */}
       <HiremeSection
-        heading={props.data.hireme.heading}
-        body={props.data.hireme.body}
-        image={props.data.hireme.image}
-        button={props.data.hireme.button}
+        heading={props.data[3].Heading}
+        body={props.data[3].Intro}
+        image={props.data[3].Image}
+        button={props.data[3].Button}
       />
     </div>
   );

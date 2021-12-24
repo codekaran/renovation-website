@@ -27,67 +27,116 @@ const HomePage = (props) => {
           <Image src={lightbulb} alt="lightbulb" />
         </div>
         <div className="content">
-          <div className="greeting">{parse(props.data.hero.greeting)}</div>
-          <div className="name">{parse(props.data.hero.name)}</div>
-          <div className="profession">{parse(props.data.hero.profession)}</div>
-          <div className="intro">{parse(props.data.hero.intro)}</div>
+          <h1 className="greeting">{parse(props.data[0].Greeting)}</h1>
+          <div className="name">{parse(props.data[0].Heading)}</div>
+          <div className="profession">{parse(props.data[0].SubHeading)}</div>
+          <div className="intro">{parse(props.data[0].Intro)}</div>
           <div className="buttons">
             <div className="btn pointer">
               <Image src={suitcase} alt="Suitcase" />
-              {parse(props.data.hero.button1)}
+              {parse(props.data[0].Button1)}
             </div>
             <div className="btn2 pointer">
               <BiBuildingHouse />
-              {parse(props.data.hero.button2)}
+              {parse(props.data[0].Button2)}
             </div>
           </div>
         </div>
         <div
           className="hero-image bg-img"
-          style={{ backgroundImage: "url(" + props.data.hero.image + ")" }}
+          style={{ backgroundImage: "url(" + props.data[0].Image + ")" }}
         />
       </div>
 
       {/* About Section */}
       <div className="about-section">
-        <div className="heading">{parse(props.data.about.heading)}</div>
+        <div className="heading">{parse(props.data[1].Heading)}</div>
         <div className="content">
           <div
             className="image bg-img"
-            style={{ backgroundImage: "url(" + props.data.about.image + ")" }}
+            style={{ backgroundImage: "url(" + props.data[0].Image + ")" }}
           />
-          <div className="body">{parse(props.data.about.body)}</div>
+          <div className="body">{parse(props.data[1].Intro)}</div>
         </div>
       </div>
 
       {/* Service Section */}
       <div className="service-section bg-yellow">
-        <div className="heading">{parse(props.data.service.heading)}</div>
+        <div className="heading">{parse(props.data[2].Heading)}</div>
         <div className="content">
-          {props.data.service.services.map((e, key) => {
-            return (
-              <div className="card" key={key}>
-                <div
-                  className="image bg-img"
-                  style={{
-                    backgroundImage: "url(" + e.image + ")",
-                  }}
-                />
-                <div className="card-body">
-                  <div className="title">{parse(e.title)}</div>
-                  <div className="body">{parse(e.body)}</div>
-                </div>
-              </div>
-            );
-          })}
+          {/* Card 1 */}
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage1 + ")",
+              }}
+            />
+            <div className="card-body">
+              <div className="title">{parse(props.data[2].CardHeading1)}</div>
+              <div className="body">{parse(props.data[2].CardIntro1)}</div>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage2 + ")",
+              }}
+            />
+            <div className="card-body">
+              <div className="title">{parse(props.data[2].CardHeading2)}</div>
+              <div className="body">{parse(props.data[2].CardIntro2)}</div>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage3 + ")",
+              }}
+            />
+            <div className="card-body">
+              <div className="title">{parse(props.data[2].CardHeading3)}</div>
+              <div className="body">{parse(props.data[2].CardIntro3)}</div>
+            </div>
+          </div>
+          {/* Card 4 */}
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage4 + ")",
+              }}
+            />
+            <div className="card-body">
+              <div className="title">{parse(props.data[2].CardHeading4)}</div>
+              <div className="body">{parse(props.data[2].CardIntro4)}</div>
+            </div>
+          </div>
+          {/* Card 5 */}
+          <div className="card">
+            <div
+              className="image bg-img"
+              style={{
+                backgroundImage: "url(" + props.data[2].CardImage5 + ")",
+              }}
+            />
+            <div className="card-body">
+              <div className="title">{parse(props.data[2].CardHeading5)}</div>
+              <div className="body">{parse(props.data[2].CardIntro5)}</div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Gallery Section */}
       <div className="gallery-section">
-        <div className="heading">Work I have done</div>
+        <div className="heading">{parse(props.data[3].Heading)}</div>
         <div className="content-web">
-          {props.data.gallery.webView.map((image, key) => {
+          {props.data[3].webView.map((image, key) => {
             return (
               <div
                 key={key}
@@ -105,7 +154,7 @@ const HomePage = (props) => {
           })}
         </div>
         <div className="content-mob">
-          {props.data.gallery.mobileView.map((image, key) => {
+          {props.data[3].mobileView.map((image, key) => {
             return (
               <div
                 key={key}
@@ -126,7 +175,7 @@ const HomePage = (props) => {
 
       {/* Testimonial Section */}
       <div className="testimonial-section">
-        <div className="heading">{parse(props.data.testimonial.heading)}</div>
+        <div className="heading">{parse(props.data[4].Heading)}</div>
         <div className="content">
           <Carousel
             responsive={responsive}
@@ -137,24 +186,62 @@ const HomePage = (props) => {
             autoPlaySpeed={1000}
             keyBoardControl={true}
           >
-            {props.data.testimonial.testimonies.map((e, key) => {
-              return (
-                <div className="card" key={key}>
-                  <div className="box">
-                    <div className="user">
-                      <div
-                        className="profile bg-img"
-                        style={{
-                          backgroundImage: "url(" + e.url + ")",
-                        }}
-                      ></div>
-                      <div className="name">{parse(e.name)}</div>
-                    </div>
-                    <div className="review">{parse(e.review_msg)}</div>
-                  </div>
+            <div className="card">
+              <div className="box">
+                <div className="user">
+                  <div
+                    className="profile bg-img"
+                    style={{
+                      backgroundImage: "url(" + props.data[4].CardImage1 + ")",
+                    }}
+                  ></div>
+                  <div className="name">{parse(props.data[4].CardHeading1)}</div>
                 </div>
-              );
-            })}
+                <div className="review">{parse(props.data[4].CardIntro1)}</div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <div className="user">
+                  <div
+                    className="profile bg-img"
+                    style={{
+                      backgroundImage: "url(" + props.data[4].CardImage2 + ")",
+                    }}
+                  ></div>
+                  <div className="name">{parse(props.data[4].CardHeading2)}</div>
+                </div>
+                <div className="review">{parse(props.data[4].CardIntro2)}</div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <div className="user">
+                  <div
+                    className="profile bg-img"
+                    style={{
+                      backgroundImage: "url(" + props.data[4].CardImage3 + ")",
+                    }}
+                  ></div>
+                  <div className="name">{parse(props.data[4].CardHeading3)}</div>
+                </div>
+                <div className="review">{parse(props.data[4].CardIntro3)}</div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <div className="user">
+                  <div
+                    className="profile bg-img"
+                    style={{
+                      backgroundImage: "url(" + props.data[4].CardImage4 + ")",
+                    }}
+                  ></div>
+                  <div className="name">{parse(props.data[4].CardHeading4)}</div>
+                </div>
+                <div className="review">{parse(props.data[4].CardIntro4)}</div>
+              </div>
+            </div>
           </Carousel>
         </div>
       </div>
