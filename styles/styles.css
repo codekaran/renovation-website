@@ -408,6 +408,7 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
+  margin: 0px;
   color: #111111;
   margin-bottom: 32px;
 }
@@ -425,6 +426,7 @@
   font-size: 24px;
   line-height: 42px;
   letter-spacing: 0.03em;
+  margin: 0px;
   color: #343434;
   margin-bottom: 40px;
 }
@@ -521,6 +523,7 @@
 }
 
 .home-page .hero-section .content .greeting {
+  margin: 0px;
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
@@ -536,6 +539,7 @@
 
 .home-page .hero-section .content .name {
   font-weight: bold;
+  margin: 0px;
   font-size: 96px;
   line-height: 113px;
   color: #111111;
@@ -554,6 +558,7 @@
 
 .home-page .hero-section .content .profession {
   font-weight: 500;
+  margin: 0px;
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.08em;
@@ -572,6 +577,7 @@
 .home-page .hero-section .content .intro {
   font-size: 24px;
   line-height: 36px;
+  margin: 0px;
   letter-spacing: 0.03em;
   color: #343434;
   margin-top: 44px;
@@ -666,6 +672,7 @@
   color: #111111;
   padding-left: 30px;
   padding-bottom: 15px;
+  margin: 0px;
   margin-left: 90px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -718,6 +725,7 @@
 }
 
 .home-page .about-section .content .body {
+  margin: 0px;
   -webkit-box-flex: 0.5;
       -ms-flex: 0.5;
           flex: 0.5;
@@ -762,6 +770,7 @@
 .home-page .service-section .heading {
   font-weight: bold;
   font-size: 36px;
+  margin: 0px;
   line-height: 42px;
   padding: 0px 0px 15px 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -846,6 +855,7 @@
   font-size: 24px;
   line-height: 28px;
   text-align: center;
+  margin: 0px;
   color: #000000;
   padding: 28px 0 20px;
 }
@@ -860,6 +870,7 @@
 .home-page .service-section .content .card .card-body .body {
   font-size: 16px;
   line-height: 19px;
+  margin: 0px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #343434;
@@ -890,6 +901,7 @@
 }
 
 .home-page .gallery-section .heading {
+  margin: 0px;
   padding-left: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -971,6 +983,7 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
+  margin: 0px;
   color: #111111;
 }
 
@@ -1086,6 +1099,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
+  margin: 0px;
   color: #111111;
   margin-left: 10px;
 }
@@ -1094,6 +1108,7 @@
   font-size: 18px;
   line-height: 21px;
   color: #343434;
+  margin: 0px;
   margin-left: 70px;
 }
 
@@ -1123,6 +1138,7 @@
   font-weight: bold;
   font-size: 96px;
   line-height: 113px;
+  margin: 0px;
   color: #111111;
   margin-bottom: 50px;
 }
@@ -1138,6 +1154,7 @@
 .about-page .hero-section .intro {
   font-size: 18px;
   line-height: 42px;
+  margin: 0px;
   color: #343434;
   padding-top: 32px;
 }
@@ -1255,6 +1272,7 @@
 
 .about-page .hero-section .social-icons .sub-heading {
   font-weight: bold;
+  margin: 0px;
   font-size: 24px;
   line-height: 28px;
   color: #111111;
@@ -1351,6 +1369,7 @@
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+  margin: 0px;
   padding: 20px 0;
 }
 
@@ -1358,6 +1377,7 @@
   font-size: 20px;
   line-height: 23px;
   color: #000000;
+  margin: 0px;
   padding-bottom: 16px;
 }
 
@@ -1379,6 +1399,7 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
+  margin: 0px;
   color: #111111;
   padding-left: 30px;
   padding-bottom: 15px;
@@ -1446,6 +1467,7 @@
   line-height: 32px;
   text-align: center;
   color: #111111;
+  margin: 0px;
   padding: 32px 0 16px;
 }
 
@@ -1463,6 +1485,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: #343434;
+  margin: 0px;
   padding: 0px 16px 20px;
 }
 

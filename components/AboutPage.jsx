@@ -15,11 +15,11 @@ const AboutPage = (props) => {
     <div className="about-page">
       {/* Hero Section */}
       <div className="hero-section">
-        <div className="heading">{parse(props.data[0].Heading)}</div>
+        <h1 className="heading">{parse(props.data[0].Heading)}</h1>
         <div>
-          <div className="intro width1">{parse(props.data[0].Intro1)}</div>
-          <div className="intro width2">{parse(props.data[0].Intro2)}</div>
-          <div className="intro width3">{parse(props.data[0].Intro3)}</div>
+          <p className="intro width1">{parse(props.data[0].Intro1)}</p>
+          <p className="intro width2">{parse(props.data[0].Intro2)}</p>
+          <p className="intro width3">{parse(props.data[0].Intro3)}</p>
         </div>
         <div className="hero-images">
           <div
@@ -36,7 +36,7 @@ const AboutPage = (props) => {
           ></div>
         </div>
         <div className="social-icons">
-          <div className="sub-heading">{parse(props.data[0].SubHeading)}</div>
+          <h3 className="sub-heading">{parse(props.data[0].SubHeading)}</h3>
           <div className="icons">
             <FaFacebookF className="pointer" />
             <AiFillInstagram className="pointer" />
@@ -52,34 +52,34 @@ const AboutPage = (props) => {
           <div className="icon">
             <FaPhoneAlt />
           </div>
-          <div className="heading">{parse(props.data[1].PhoneHeading)}</div>
-          <div className="sub-heading">
+          <h3 className="heading">{parse(props.data[1].PhoneHeading)}</h3>
+          <p className="sub-heading">
             {parse(props.data[1].PhoneSubHeading)}
-          </div>
+          </p>
         </div>
         <div className="card">
           <div className="icon">
             <MdEmail />
           </div>
-          <div className="heading">{parse(props.data[1].EmailHeading)}</div>
-          <div className="sub-heading">
+          <h3 className="heading">{parse(props.data[1].EmailHeading)}</h3>
+          <p className="sub-heading">
             {parse(props.data[1].EmailSubHeading)}
-          </div>
+          </p>
         </div>
         <div className="card">
           <div className="icon">
             <MdLocationOn />
           </div>
-          <div className="heading">{parse(props.data[1].AddressHeading)}</div>
-          <div className="sub-heading">
+          <h3 className="heading">{parse(props.data[1].AddressHeading)}</h3>
+          <p className="sub-heading">
             {parse(props.data[1].AddressSubHeading)}
-          </div>
+          </p>
         </div>
       </div>
 
       {/* Skills section */}
       <div className="skill-section">
-        <div className="heading">{parse(props.data[2].Heading)}</div>
+        <h1 className="heading">{parse(props.data[2].Heading)}</h1>
         <div className="content">
           {/* Card 1 */}
           <div className="card">
@@ -89,10 +89,10 @@ const AboutPage = (props) => {
                 backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
-            <div className="card-heading">
+            <h3 className="card-heading">
               {parse(props.data[2].CardHeading1)}
-            </div>
-            <div className="card-body">{parse(props.data[2].CardIntro1)}</div>
+            </h3>
+            <p className="card-body">{parse(props.data[2].CardIntro1)}</p>
           </div>
           {/* Card 2 */}
           <div className="card">
@@ -102,10 +102,10 @@ const AboutPage = (props) => {
                 backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
-            <div className="card-heading">
+            <h3 className="card-heading">
               {parse(props.data[2].CardHeading2)}
-            </div>
-            <div className="card-body">{parse(props.data[2].CardIntro2)}</div>
+            </h3>
+            <p className="card-body">{parse(props.data[2].CardIntro2)}</p>
           </div>
           {/* Card 3 */}
           <div className="card">
@@ -115,10 +115,10 @@ const AboutPage = (props) => {
                 backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
-            <div className="card-heading">
+            <h3 className="card-heading">
               {parse(props.data[2].CardHeading3)}
-            </div>
-            <div className="card-body">{parse(props.data[2].CardIntro3)}</div>
+            </h3>
+            <p className="card-body">{parse(props.data[2].CardIntro3)}</p>
           </div>
           {/* Card 4 */}
           <div className="card">
@@ -128,10 +128,10 @@ const AboutPage = (props) => {
                 backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
-            <div className="card-heading">
+            <h3 className="card-heading">
               {parse(props.data[2].CardHeading4)}
-            </div>
-            <div className="card-body">{parse(props.data[2].CardIntro4)}</div>
+            </h3>
+            <p className="card-body">{parse(props.data[2].CardIntro4)}</p>
           </div>
           {/* Card 5 */}
           <div className="card">
@@ -141,10 +141,10 @@ const AboutPage = (props) => {
                 backgroundImage: "url(" + props.images[0] + ")",
               }}
             />
-            <div className="card-heading">
+            <h3 className="card-heading">
               {parse(props.data[2].CardHeading5)}
-            </div>
-            <div className="card-body">{parse(props.data[2].CardIntro5)}</div>
+            </h3>
+            <p className="card-body">{parse(props.data[2].CardIntro5)}</p>
           </div>
         </div>
       </div>

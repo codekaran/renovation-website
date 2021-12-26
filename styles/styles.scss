@@ -284,6 +284,7 @@ $mob: 990px;
             font-weight: bold;
             font-size: 36px;
             line-height: 42px;
+            margin: 0px;
             color: $dark2;
             margin-bottom: 32px;
             @media (max-width: $mob) {
@@ -297,6 +298,7 @@ $mob: 990px;
             font-size: 24px;
             line-height: 42px;
             letter-spacing: 0.03em;
+            margin: 0px;
             color: $dark3;
             margin-bottom: 40px;
             @media (max-width: $mob) {
@@ -310,7 +312,7 @@ $mob: 990px;
         background-color: $dark3;
         min-height: 280px;
         width: auto;
-        position: relative
+        position: relative;
     }
 }
 
@@ -373,6 +375,8 @@ $mob: 990px;
                 padding: 64px 20px 0 0;
             }
             .greeting {
+                margin: 0px;
+
                 font-weight: 600;
                 font-size: 48px;
                 line-height: 56px;
@@ -384,6 +388,7 @@ $mob: 990px;
             }
             .name {
                 font-weight: bold;
+                margin: 0px;
                 font-size: 96px;
                 line-height: 113px;
                 color: $dark2;
@@ -398,6 +403,7 @@ $mob: 990px;
             }
             .profession {
                 font-weight: 500;
+                margin: 0px;
                 font-size: 36px;
                 line-height: 42px;
                 letter-spacing: 0.08em;
@@ -412,6 +418,7 @@ $mob: 990px;
             .intro {
                 font-size: 24px;
                 line-height: 36px;
+                margin: 0px;
                 letter-spacing: 0.03em;
                 color: $dark3;
                 margin-top: 44px;
@@ -476,6 +483,7 @@ $mob: 990px;
             color: $dark2;
             padding-left: 30px;
             padding-bottom: 15px;
+            margin: 0px;
             margin-left: 90px;
             border-bottom: 1px solid rgba($dark, 0.2);
             @media (max-width: $mob) {
@@ -505,6 +513,7 @@ $mob: 990px;
                 }
             }
             .body {
+                margin: 0px;
                 flex: 0.5;
                 border-left: 10px solid $dark;
                 padding: 50px 90px 60px 60px;
@@ -534,6 +543,7 @@ $mob: 990px;
         .heading {
             font-weight: bold;
             font-size: 36px;
+            margin: 0px;
             line-height: 42px;
             padding: 0px 0px 15px 30px;
             border-bottom: 1px solid rgba($dark, 0.2);
@@ -586,6 +596,7 @@ $mob: 990px;
                         font-size: 24px;
                         line-height: 28px;
                         text-align: center;
+                        margin: 0px;
                         color: $dark;
                         padding: 28px 0 20px;
                         @media (max-width: $mob) {
@@ -596,6 +607,7 @@ $mob: 990px;
                     .body {
                         font-size: 16px;
                         line-height: 19px;
+                        margin: 0px;
                         text-align: center;
                         letter-spacing: 0.03em;
                         color: $dark3;
@@ -619,6 +631,7 @@ $mob: 990px;
             padding-left: 16px;
         }
         .heading {
+            margin: 0px;
             padding-left: 30px;
             padding-bottom: 15px;
             border-bottom: 1px solid rgba($dark, 0.2);
@@ -677,6 +690,7 @@ $mob: 990px;
             font-weight: bold;
             font-size: 36px;
             line-height: 42px;
+            margin: 0px;
             color: $dark2;
             @media (max-width: $mob) {
                 padding-left: 0px;
@@ -756,6 +770,7 @@ $mob: 990px;
                             font-weight: 500;
                             font-size: 20px;
                             line-height: 23px;
+                            margin: 0px;
                             color: $dark2;
                             margin-left: 10px;
                         }
@@ -764,6 +779,7 @@ $mob: 990px;
                         font-size: 18px;
                         line-height: 21px;
                         color: $dark3;
+                        margin: 0px;
                         margin-left: 70px;
                         @media (max-width: $mob) {
                             margin-left: 0px;
@@ -793,6 +809,7 @@ $mob: 990px;
             font-weight: bold;
             font-size: 96px;
             line-height: 113px;
+            margin: 0px;
             color: $dark2;
             margin-bottom: 50px;
             @media (max-width: $mob) {
@@ -804,6 +821,7 @@ $mob: 990px;
         .intro {
             font-size: 18px;
             line-height: 42px;
+            margin: 0px;
             color: $dark3;
             padding-top: 32px;
             @media (max-width: $mob) {
@@ -814,7 +832,6 @@ $mob: 990px;
             }
         }
         .hero-images {
-            // background-color: $dark2;
             position: absolute;
             top: auto;
             bottom: 90px;
@@ -878,6 +895,7 @@ $mob: 990px;
 
             .sub-heading {
                 font-weight: bold;
+                margin: 0px;
                 font-size: 24px;
                 line-height: 28px;
                 color: $dark2;
@@ -939,12 +957,14 @@ $mob: 990px;
                 font-size: 24px;
                 line-height: 28px;
                 color: $dark;
+                margin: 0px;
                 padding: 20px 0;
             }
             .sub-heading {
                 font-size: 20px;
                 line-height: 23px;
                 color: $dark;
+                margin: 0px;
                 padding-bottom: 16px;
             }
         }
@@ -961,6 +981,7 @@ $mob: 990px;
             font-weight: bold;
             font-size: 36px;
             line-height: 42px;
+            margin: 0px;
             color: $dark2;
             padding-left: 30px;
             padding-bottom: 15px;
@@ -1003,6 +1024,7 @@ $mob: 990px;
                     line-height: 32px;
                     text-align: center;
                     color: $dark2;
+                    margin: 0px;
                     padding: 32px 0 16px;
                     @media (max-width: $mob) {
                         font-size: 20px;
@@ -1016,6 +1038,7 @@ $mob: 990px;
                     text-align: center;
                     letter-spacing: 0.03em;
                     color: $dark3;
+                    margin: 0px;
                     padding: 0px 16px 20px;
                     @media (max-width: $mob) {
                         font-size: 18px;

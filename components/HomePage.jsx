@@ -27,10 +27,10 @@ const HomePage = (props) => {
           <Image src={lightbulb} alt="lightbulb" />
         </div>
         <div className="content">
-          <h1 className="greeting">{parse(props.data[0].Greeting)}</h1>
-          <div className="name">{parse(props.data[0].Heading)}</div>
-          <div className="profession">{parse(props.data[0].SubHeading)}</div>
-          <div className="intro">{parse(props.data[0].Intro)}</div>
+          <h3 className="greeting">{parse(props.data[0].Greeting)}</h3>
+          <h1 className="name">{parse(props.data[0].Heading)}</h1>
+          <h3 className="profession">{parse(props.data[0].SubHeading)}</h3>
+          <p className="intro">{parse(props.data[0].Intro)}</p>
           <div className="buttons">
             <div className="btn pointer">
               <Image src={suitcase} alt="Suitcase" />
@@ -50,19 +50,19 @@ const HomePage = (props) => {
 
       {/* About Section */}
       <div className="about-section">
-        <div className="heading">{parse(props.data[1].Heading)}</div>
+        <h1 className="heading">{parse(props.data[1].Heading)}</h1>
         <div className="content">
           <div
             className="image bg-img"
             style={{ backgroundImage: "url(" + props.images[1] + ")" }}
           />
-          <div className="body">{parse(props.data[1].Intro)}</div>
+          <p className="body">{parse(props.data[1].Intro)}</p>
         </div>
       </div>
 
       {/* Service Section */}
       <div className="service-section bg-yellow">
-        <div className="heading">{parse(props.data[2].Heading)}</div>
+        <h1 className="heading">{parse(props.data[2].Heading)}</h1>
         <div className="content">
           {/* Card 1 */}
           <div className="card">
@@ -73,8 +73,8 @@ const HomePage = (props) => {
               }}
             />
             <div className="card-body">
-              <div className="title">{parse(props.data[2].CardHeading1)}</div>
-              <div className="body">{parse(props.data[2].CardIntro1)}</div>
+              <h3 className="title">{parse(props.data[2].CardHeading1)}</h3>
+              <p className="body">{parse(props.data[2].CardIntro1)}</p>
             </div>
           </div>
           {/* Card 2 */}
@@ -86,8 +86,8 @@ const HomePage = (props) => {
               }}
             />
             <div className="card-body">
-              <div className="title">{parse(props.data[2].CardHeading2)}</div>
-              <div className="body">{parse(props.data[2].CardIntro2)}</div>
+              <h3 className="title">{parse(props.data[2].CardHeading2)}</h3>
+              <p className="body">{parse(props.data[2].CardIntro2)}</p>
             </div>
           </div>
           {/* Card 3 */}
@@ -99,8 +99,8 @@ const HomePage = (props) => {
               }}
             />
             <div className="card-body">
-              <div className="title">{parse(props.data[2].CardHeading3)}</div>
-              <div className="body">{parse(props.data[2].CardIntro3)}</div>
+              <h3 className="title">{parse(props.data[2].CardHeading3)}</h3>
+              <p className="body">{parse(props.data[2].CardIntro3)}</p>
             </div>
           </div>
           {/* Card 4 */}
@@ -112,8 +112,8 @@ const HomePage = (props) => {
               }}
             />
             <div className="card-body">
-              <div className="title">{parse(props.data[2].CardHeading4)}</div>
-              <div className="body">{parse(props.data[2].CardIntro4)}</div>
+              <h3 className="title">{parse(props.data[2].CardHeading4)}</h3>
+              <p className="body">{parse(props.data[2].CardIntro4)}</p>
             </div>
           </div>
           {/* Card 5 */}
@@ -125,8 +125,8 @@ const HomePage = (props) => {
               }}
             />
             <div className="card-body">
-              <div className="title">{parse(props.data[2].CardHeading5)}</div>
-              <div className="body">{parse(props.data[2].CardIntro5)}</div>
+              <h3 className="title">{parse(props.data[2].CardHeading5)}</h3>
+              <p className="body">{parse(props.data[2].CardIntro5)}</p>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const HomePage = (props) => {
 
       {/* Gallery Section */}
       <div className="gallery-section">
-        <div className="heading">{parse(props.data[3].Heading)}</div>
+        <h1 className="heading">{parse(props.data[3].Heading)}</h1>
         <div className="content-web">
           {props.gallery.webView.map((image, key) => {
             return (
@@ -175,7 +175,7 @@ const HomePage = (props) => {
 
       {/* Testimonial Section */}
       <div className="testimonial-section">
-        <div className="heading">{parse(props.data[4].Heading)}</div>
+        <h1 className="heading">{parse(props.data[4].Heading)}</h1>
         <div className="content">
           <Carousel
             responsive={responsive}
@@ -195,11 +195,9 @@ const HomePage = (props) => {
                       backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">
-                    {parse(props.data[4].CardHeading1)}
-                  </div>
+                  <h3 className="name">{parse(props.data[4].CardHeading1)}</h3>
                 </div>
-                <div className="review">{parse(props.data[4].CardIntro1)}</div>
+                <p className="review">{parse(props.data[4].CardIntro1)}</p>
               </div>
             </div>
             <div className="card">
@@ -211,11 +209,9 @@ const HomePage = (props) => {
                       backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">
-                    {parse(props.data[4].CardHeading2)}
-                  </div>
+                  <h3 className="name">{parse(props.data[4].CardHeading2)}</h3>
                 </div>
-                <div className="review">{parse(props.data[4].CardIntro2)}</div>
+                <p className="review">{parse(props.data[4].CardIntro2)}</p>
               </div>
             </div>
             <div className="card">
@@ -227,11 +223,9 @@ const HomePage = (props) => {
                       backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">
-                    {parse(props.data[4].CardHeading3)}
-                  </div>
+                  <h3 className="name">{parse(props.data[4].CardHeading3)}</h3>
                 </div>
-                <div className="review">{parse(props.data[4].CardIntro3)}</div>
+                <p className="review">{parse(props.data[4].CardIntro3)}</p>
               </div>
             </div>
             <div className="card">
@@ -243,11 +237,9 @@ const HomePage = (props) => {
                       backgroundImage: "url(" + props.images[3] + ")",
                     }}
                   ></div>
-                  <div className="name">
-                    {parse(props.data[4].CardHeading4)}
-                  </div>
+                  <h3 className="name">{parse(props.data[4].CardHeading4)}</h3>
                 </div>
-                <div className="review">{parse(props.data[4].CardIntro4)}</div>
+                <p className="review">{parse(props.data[4].CardIntro4)}</p>
               </div>
             </div>
           </Carousel>

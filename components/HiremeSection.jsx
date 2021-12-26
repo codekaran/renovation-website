@@ -7,8 +7,8 @@ const HiremeSection = (props) => {
   return (
     <div className="hire-me-section bg-yellow">
       <div className="content">
-        <div className="heading">{parse(props.heading)}</div>
-        <div className="body">{parse(props.body)}</div>
+        <h1 className="heading">{parse(props.heading)}</h1>
+        <p className="body">{parse(props.body)}</p>
         <div className="btn pointer">
           <Image src={suitcase} alt="Suitcase" />
           {parse(props.button)}
