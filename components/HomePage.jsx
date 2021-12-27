@@ -204,11 +204,15 @@ const HomePage = (props) => {
           {/* Card 1 */}
           <div className="card">
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[2] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative"}}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading1)}</h3>
               <p className="body">{parse(props.data[2].CardIntro1)}</p>
@@ -217,11 +221,15 @@ const HomePage = (props) => {
           {/* Card 2 */}
           <div className="card">
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[2] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative"}}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading2)}</h3>
               <p className="body">{parse(props.data[2].CardIntro2)}</p>
@@ -230,11 +238,15 @@ const HomePage = (props) => {
           {/* Card 3 */}
           <div className="card">
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[2] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative"}}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading3)}</h3>
               <p className="body">{parse(props.data[2].CardIntro3)}</p>
@@ -243,11 +255,15 @@ const HomePage = (props) => {
           {/* Card 4 */}
           <div className="card">
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[2] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative"}}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading4)}</h3>
               <p className="body">{parse(props.data[2].CardIntro4)}</p>
@@ -256,11 +272,15 @@ const HomePage = (props) => {
           {/* Card 5 */}
           <div className="card">
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[2] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative"}}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading5)}</h3>
               <p className="body">{parse(props.data[2].CardIntro5)}</p>

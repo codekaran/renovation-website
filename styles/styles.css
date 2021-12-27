@@ -537,6 +537,10 @@
   }
 }
 
+.home-page .hero-section .content .greeting p {
+  margin: 0px;
+}
+
 .home-page .hero-section .content .name {
   font-weight: bold;
   margin: 0px;

@@ -38,11 +38,15 @@ const ServicePage = (props) => {
           <div className="card">
             <div className="float">1</div>
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[0] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative", zIndex: "-1" }}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="sub-heading">
                 {parse(props.data[3].CardHeading1)}
@@ -54,11 +58,15 @@ const ServicePage = (props) => {
           <div className="card">
             <div className="float">2</div>
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[0] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative", zIndex: "-1" }}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="sub-heading">
                 {parse(props.data[3].CardHeading2)}
@@ -70,11 +78,15 @@ const ServicePage = (props) => {
           <div className="card">
             <div className="float">3</div>
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[0] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative", zIndex: "-1" }}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="sub-heading">
                 {parse(props.data[3].CardHeading3)}
@@ -86,11 +98,35 @@ const ServicePage = (props) => {
           <div className="card">
             <div className="float">4</div>
             <div
-              className="image bg-img"
-              style={{
-                backgroundImage: "url(" + props.images[0] + ")",
-              }}
-            />
+              className="image"
+              style={{ position: "relative", zIndex: "-1" }}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
+            <div className="card-body">
+              <h3 className="sub-heading">
+                {parse(props.data[3].CardHeading4)}
+              </h3>
+              <p className="body">{parse(props.data[3].CardIntro4)}</p>
+            </div>
+          </div>
+          {/* Card 5 */}
+          <div className="card">
+            <div className="float">5</div>
+            <div
+              className="image"
+              style={{ position: "relative", zIndex: "-1" }}
+            >
+              <Image
+                src="/../public/service.png"
+                alt="Service 1"
+                layout="fill"
+              />
+            </div>
             <div className="card-body">
               <h3 className="sub-heading">
                 {parse(props.data[3].CardHeading4)}
