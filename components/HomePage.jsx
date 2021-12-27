@@ -203,15 +203,8 @@ const HomePage = (props) => {
         <div className="content">
           {/* Card 1 */}
           <div className="card">
-            <div
-              className="image"
-              style={{ position: "relative"}}
-            >
-              <Image
-                src="/../public/service.png"
-                alt="Service 1"
-                layout="fill"
-              />
+            <div className="image" style={{ position: "relative" }}>
+              <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading1)}</h3>
@@ -222,13 +215,9 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative"}}
+              style={{ position: "relative", zIndex: "-1" }}
             >
-              <Image
-                src="/../public/service.png"
-                alt="Service 1"
-                layout="fill"
-              />
+              <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading2)}</h3>
@@ -239,13 +228,9 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative"}}
+              style={{ position: "relative", zIndex: "-1" }}
             >
-              <Image
-                src="/../public/service.png"
-                alt="Service 1"
-                layout="fill"
-              />
+              <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading3)}</h3>
@@ -256,13 +241,9 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative"}}
+              style={{ position: "relative", zIndex: "-1" }}
             >
-              <Image
-                src="/../public/service.png"
-                alt="Service 1"
-                layout="fill"
-              />
+              <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading4)}</h3>
@@ -273,13 +254,9 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative"}}
+              style={{ position: "relative", zIndex: "-1" }}
             >
-              <Image
-                src="/../public/service.png"
-                alt="Service 1"
-                layout="fill"
-              />
+              <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
               <h3 className="title">{parse(props.data[2].CardHeading5)}</h3>

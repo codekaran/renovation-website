@@ -42,7 +42,7 @@ const ServicePage = (props) => {
               style={{ position: "relative", zIndex: "-1" }}
             >
               <Image
-                src="/../public/service.png"
+                src="/service.png"
                 alt="Service 1"
                 layout="fill"
               />
@@ -62,7 +62,7 @@ const ServicePage = (props) => {
               style={{ position: "relative", zIndex: "-1" }}
             >
               <Image
-                src="/../public/service.png"
+                src="/service.png"
                 alt="Service 1"
                 layout="fill"
               />
@@ -82,7 +82,7 @@ const ServicePage = (props) => {
               style={{ position: "relative", zIndex: "-1" }}
             >
               <Image
-                src="/../public/service.png"
+                src="/service.png"
                 alt="Service 1"
                 layout="fill"
               />
@@ -102,7 +102,7 @@ const ServicePage = (props) => {
               style={{ position: "relative", zIndex: "-1" }}
             >
               <Image
-                src="/../public/service.png"
+                src="/service.png"
                 alt="Service 1"
                 layout="fill"
               />
@@ -122,16 +122,16 @@ const ServicePage = (props) => {
               style={{ position: "relative", zIndex: "-1" }}
             >
               <Image
-                src="/../public/service.png"
+                src="/service.png"
                 alt="Service 1"
                 layout="fill"
               />
             </div>
             <div className="card-body">
               <h3 className="sub-heading">
-                {parse(props.data[3].CardHeading4)}
+                {parse(props.data[3].CardHeading5)}
               </h3>
-              <p className="body">{parse(props.data[3].CardIntro4)}</p>
+              <p className="body">{parse(props.data[3].CardIntro5)}</p>
             </div>
           </div>
         </div>
