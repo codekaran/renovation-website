@@ -12,7 +12,7 @@ const about = (props) => {
       <Head>
         <title>About me | RENGEB</title>
       </Head>
-      <AboutPage data={props.data} images={images}/>
+      <AboutPage data={props.data.sections} images={images}/>
     </Fragment>
   );
 };
@@ -20,52 +20,21 @@ const about = (props) => {
 export default about;
 
 export async function getStaticProps() {
-  const data = [
-    {
-      Heading: "About me",
-      Intro1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
-      Intro2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
-      Intro3:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
-      SubHeading: "Follow me on",
-    },
-    {
-      PhoneHeading: "Contact no.",
-      PhoneSubHeading: "+362 2522065132",
-      EmailHeading: "Email address",
-      EmailSubHeading: "hello@gmail.com",
-      AddressHeading: "Address",
-      AddressSubHeading:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc",
-    },
-    {
-      Heading: "Skills I have",
-      CardHeading1: "Skill 1",
-      CardIntro1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-      CardHeading2: "Skill 2",
-      CardIntro2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-      CardHeading3: "Skill 3",
-      CardIntro3:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-      CardHeading4: "Skill 4",
-      CardIntro4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-      CardHeading5: "Skill 5",
-      CardIntro5:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,",
-    },
-    {
-      Heading: "Do you want to renovate your house or office ?",
-      Intro:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor.",
-      Button: "Hire me",
-    },
-  ];
+  let data = {};
+  // const lang = locale === "nl" ? "nl" : "en";
+  try {
+    let res = await fetch(
+      "http://161.35.41.189/getData?website=rengeb&page=about&lang=en"
+    );
+    res = await res.json();
+    data = JSON.parse(res.data);
+    data["path"] = "";
+  } catch (err) {
+    console.log(err);
+  }
+
   return {
     props: { data },
+    revalidate: 1,
   };
 }

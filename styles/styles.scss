@@ -614,12 +614,14 @@ $mob: 990px;
                     }
                 }
             }
-            .card:nth-child(3),
-            .card:nth-child(5) {
+            .card:nth-child(3),{
                 border: none;
                 @media (max-width: $mob) {
                     border-bottom: 1px solid rgba($dark, 0.2);
                 }
+            }
+            .card:last-child{
+                border: none;
             }
         }
     }
@@ -653,7 +655,7 @@ $mob: 990px;
             display: grid;
             background: rgba($dark, 0.2);
             grid-template-columns: repeat(22, minmax(30px, auto));
-            grid-template-rows: repeat(30, minmax(40px, auto));
+            grid-template-rows: repeat(30, minmax(60px, auto));
             gap: 1px;
             @media (max-width: $mob) {
                 display: none;
@@ -670,7 +672,7 @@ $mob: 990px;
                 margin-top: 32px;
                 margin-right: 16px;
                 grid-template-columns: repeat(5, minmax(30px, auto));
-                grid-template-rows: repeat(27, minmax(50px, auto));
+                grid-template-rows: repeat(23, minmax(50px, auto));
                 background: rgba($dark, 0.2);
                 gap: 1px;
             }

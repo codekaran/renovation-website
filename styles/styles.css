@@ -876,16 +876,18 @@
   color: #343434;
 }
 
-.home-page .service-section .content .card:nth-child(3),
-.home-page .service-section .content .card:nth-child(5) {
+.home-page .service-section .content .card:nth-child(3) {
   border: none;
 }
 
 @media (max-width: 990px) {
-  .home-page .service-section .content .card:nth-child(3),
-  .home-page .service-section .content .card:nth-child(5) {
+  .home-page .service-section .content .card:nth-child(3) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
+}
+
+.home-page .service-section .content .card:last-child {
+  border: none;
 }
 
 .home-page .gallery-section {
@@ -929,8 +931,8 @@
   background: rgba(0, 0, 0, 0.2);
   -ms-grid-columns: (minmax(30px, auto))[22];
       grid-template-columns: repeat(22, minmax(30px, auto));
-  -ms-grid-rows: (minmax(40px, auto))[30];
-      grid-template-rows: repeat(30, minmax(40px, auto));
+  -ms-grid-rows: (minmax(60px, auto))[30];
+      grid-template-rows: repeat(30, minmax(60px, auto));
   gap: 1px;
 }
 
@@ -957,8 +959,8 @@
     margin-right: 16px;
     -ms-grid-columns: (minmax(30px, auto))[5];
         grid-template-columns: repeat(5, minmax(30px, auto));
-    -ms-grid-rows: (minmax(50px, auto))[27];
-        grid-template-rows: repeat(27, minmax(50px, auto));
+    -ms-grid-rows: (minmax(50px, auto))[23];
+        grid-template-rows: repeat(23, minmax(50px, auto));
     background: rgba(0, 0, 0, 0.2);
     gap: 1px;
   }

@@ -11,44 +11,29 @@ const service = (props) => {
       <Head>
         <title>Service | RENGEB</title>
       </Head>
-      <ServicePage data={props.data} images={images} />
+      <ServicePage data={props.data.sections} images={images} />
     </Fragment>
   );
 };
 
 export default service;
+
 export async function getStaticProps() {
-  const data = [
-    { Heading: "Service" },
-    {
-      Heading: "What I do",
-      SubHeading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      Intro:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet. Et, mus fames fringilla nisi. Sit etiam egestas posuere id enim quis leo. Tortor consectetur egestas dapibus non.",
-    },
-    {
-      Heading: "Do you want to renovate your house or office ?",
-      Intro:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor. Neque porta elementum erat vitae cursus at. Volutpat,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum viverra bibendum fringilla sed dolor.",
-      Button: "Hire me",
-    },
-    {
-      Heading: "What I provide",
-      CardHeading1: "Service 1",
-      CardIntro1:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet",
-      CardHeading2: "Service 1",
-      CardIntro2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet",
-      CardHeading3: "Service 1",
-      CardIntro3:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet",
-      CardHeading4: "Service 1",
-      CardIntro4:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ut habitant eget ut nunc. Consequat quis senectus praesent vitae, nibh sit faucibus massa. Integer blandit quisque rutrum quis mauris blandit amet",
-    },
-  ];
+  let data = {};
+  // const lang = locale === "nl" ? "nl" : "en";
+  try {
+    let res = await fetch(
+      "http://161.35.41.189/getData?website=rengeb&page=service&lang=en"
+    );
+    res = await res.json();
+    data = JSON.parse(res.data);
+    data["path"] = "";
+  } catch (err) {
+    console.log(err);
+  }
+
   return {
     props: { data },
+    revalidate: 1,
   };
 }

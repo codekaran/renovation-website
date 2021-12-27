@@ -18,6 +18,143 @@ const responsive = {
   },
 };
 
+const web = [
+  {
+    col_start: "1",
+    col_end: "10",
+    row_start: "1",
+    row_end: "10",
+  },
+  {
+    col_start: "10",
+    col_end: "15",
+    row_start: "1",
+    row_end: "7",
+  },
+  {
+    col_start: "15",
+    col_end: "23",
+    row_start: "1",
+    row_end: "9",
+  },
+  {
+    col_start: "1",
+    col_end: "10",
+    row_start: "10",
+    row_end: "15",
+  },
+  {
+    col_start: "10",
+    col_end: "15",
+    row_start: "7",
+    row_end: "15",
+  },
+  {
+    col_start: "15",
+    col_end: "23",
+    row_start: "9",
+    row_end: "15",
+  },
+  {
+    col_start: "1",
+    col_end: "14",
+    row_start: "15",
+    row_end: "23",
+  },
+  {
+    col_start: "14",
+    col_end: "23",
+    row_start: "15",
+    row_end: "22",
+  },
+  {
+    col_start: "1",
+    col_end: "7",
+    row_start: "23",
+    row_end: "31",
+  },
+  {
+    col_start: "7",
+    col_end: "14",
+    row_start: "23",
+    row_end: "31",
+  },
+  {
+    col_start: "14",
+    col_end: "23",
+    row_start: "22",
+    row_end: "31",
+  },
+];
+const mobile = [
+  {
+    col_start: "1",
+    col_end: "4",
+    row_start: "1",
+    row_end: "6",
+  },
+  {
+    col_start: "4",
+    col_end: "6",
+    row_start: "1",
+    row_end: "4",
+  },
+  {
+    col_start: "4",
+    col_end: "6",
+    row_start: "4",
+    row_end: "6",
+  },
+  {
+    col_start: "1",
+    col_end: "6",
+    row_start: "6",
+    row_end: "10",
+  },
+  {
+    col_start: "1",
+    col_end: "3",
+    row_start: "10",
+    row_end: "13",
+  },
+  {
+    col_start: "1",
+    col_end: "3",
+    row_start: "13",
+    row_end: "15",
+  },
+  {
+    col_start: "3",
+    col_end: "6",
+    row_start: "10",
+    row_end: "15",
+  },
+  {
+    col_start: "1",
+    col_end: "6",
+    row_start: "15",
+    row_end: "19",
+  },
+  {
+    col_start: "1",
+    col_end: "4",
+    row_start: "19",
+    row_end: "24",
+  },
+  {
+    col_start: "4",
+    col_end: "6",
+    row_start: "19",
+    row_end: "22",
+  },
+  {
+    col_start: "4",
+    col_end: "6",
+    row_start: "22",
+    row_end: "24",
+  },
+];
+
 const HomePage = (props) => {
   return (
     <div className="home-page">
@@ -136,17 +273,17 @@ const HomePage = (props) => {
       <div className="gallery-section">
         <h1 className="heading">{parse(props.data[3].Heading)}</h1>
         <div className="content-web">
-          {props.gallery.webView.map((image, key) => {
+          {props.gallery.map((image, index) => {
             return (
               <div
-                key={key}
+                key={index}
                 className="image bg-img"
                 style={{
-                  backgroundImage: "url(" + image.url + ")",
-                  gridColumnStart: image.col_start,
-                  gridColumnEnd: image.col_end,
-                  gridRowStart: image.row_start,
-                  gridRowEnd: image.row_end,
+                  backgroundImage: "url(" + image + ")",
+                  gridColumnStart: web[index].col_start,
+                  gridColumnEnd: web[index].col_end,
+                  gridRowStart: web[index].row_start,
+                  gridRowEnd: web[index].row_end,
                   border: "10px solid #ffffff",
                 }}
               />
@@ -154,18 +291,18 @@ const HomePage = (props) => {
           })}
         </div>
         <div className="content-mob">
-          {props.gallery.mobileView.map((image, key) => {
+          {props.gallery.map((image, index) => {
             return (
               <div
-                key={key}
+                key={index}
                 className="image bg-img"
                 style={{
-                  backgroundImage: "url(" + image.url + ")",
-                  gridColumnStart: image.col_start,
-                  gridColumnEnd: image.col_end,
-                  gridRowStart: image.row_start,
-                  gridRowEnd: image.row_end,
-                  border: "3px solid #ffffff",
+                  backgroundImage: "url(" + image + ")",
+                  gridColumnStart: mobile[index].col_start,
+                  gridColumnEnd: mobile[index].col_end,
+                  gridRowStart: mobile[index].row_start,
+                  gridRowEnd: mobile[index].row_end,
+                  border: "4px solid #ffffff",
                 }}
               />
             );
