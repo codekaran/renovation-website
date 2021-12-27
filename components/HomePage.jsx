@@ -215,7 +215,7 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative", zIndex: "-1" }}
+              style={{ position: "relative"}}
             >
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
@@ -228,7 +228,7 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative", zIndex: "-1" }}
+              style={{ position: "relative"}}
             >
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
@@ -241,7 +241,7 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative", zIndex: "-1" }}
+              style={{ position: "relative"}}
             >
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
@@ -254,7 +254,7 @@ const HomePage = (props) => {
           <div className="card">
             <div
               className="image"
-              style={{ position: "relative", zIndex: "-1" }}
+              style={{ position: "relative"}}
             >
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
