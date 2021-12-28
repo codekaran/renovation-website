@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import parse from "html-react-parser";
 import { BiBuildingHouse } from "react-icons/bi";
+import Link from "next/link";
 
 const responsive = {
   web: {
@@ -169,10 +170,12 @@ const HomePage = (props) => {
           <h3 className="profession">{parse(props.data[0].SubHeading)}</h3>
           <p className="intro">{parse(props.data[0].Intro)}</p>
           <div className="buttons">
-            <div className="btn pointer">
-              <Image src={suitcase} alt="Suitcase" />
-              {parse(props.data[0].Button1)}
-            </div>
+            <Link href="/contact" passHref>
+              <div className="btn pointer">
+                <Image src={suitcase} alt="Suitcase" />
+                {parse(props.data[0].Button1)}
+              </div>
+            </Link>
             <div className="btn2 pointer">
               <BiBuildingHouse />
               {parse(props.data[0].Button2)}
@@ -213,10 +216,7 @@ const HomePage = (props) => {
           </div>
           {/* Card 2 */}
           <div className="card">
-            <div
-              className="image"
-              style={{ position: "relative"}}
-            >
+            <div className="image" style={{ position: "relative" }}>
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
@@ -226,10 +226,7 @@ const HomePage = (props) => {
           </div>
           {/* Card 3 */}
           <div className="card">
-            <div
-              className="image"
-              style={{ position: "relative"}}
-            >
+            <div className="image" style={{ position: "relative" }}>
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
@@ -239,10 +236,7 @@ const HomePage = (props) => {
           </div>
           {/* Card 4 */}
           <div className="card">
-            <div
-              className="image"
-              style={{ position: "relative"}}
-            >
+            <div className="image" style={{ position: "relative" }}>
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">
@@ -252,10 +246,7 @@ const HomePage = (props) => {
           </div>
           {/* Card 5 */}
           <div className="card">
-            <div
-              className="image"
-              style={{ position: "relative"}}
-            >
+            <div className="image" style={{ position: "relative" }}>
               <Image src="/service.png" alt="Service 1" layout="fill" />
             </div>
             <div className="card-body">

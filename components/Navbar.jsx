@@ -6,6 +6,7 @@ import { MdClose } from "react-icons/md";
 import { BiBuildingHouse } from "react-icons/bi";
 import suitcase from "../public/Suitcase.svg";
 import parse from "html-react-parser";
+import { useRouter } from "next/router";
 
 const Navbar = (props) => {
   const [state, setState] = useState(false);
@@ -15,6 +16,11 @@ const Navbar = (props) => {
   const closeNav = () => {
     setState(false);
   };
+  const bold = {
+    fontWeight: "800",
+    color: "#000",
+  };
+  const router = useRouter();
   const Toggle = (props) => {
     return (
       <div className="mobile-nav">
@@ -25,21 +31,33 @@ const Navbar = (props) => {
           <div>
             <div className="links">
               <div className="link">
-                <span className="pointer" onClick={closeNav}>
+                <span
+                  className="pointer nav-link"
+                  onClick={closeNav}
+                  style={router.pathname === "/about" ? bold : {}}
+                >
                   <Link href="/" passHref>
                     {parse(props.data.links.home)}
                   </Link>
                 </span>
               </div>
               <div className="link">
-                <span className="pointer" onClick={closeNav}>
+                <span
+                  className="pointer nav-link"
+                  onClick={closeNav}
+                  style={router.pathname === "/about" ? bold : {}}
+                >
                   <Link href="/about" passHref>
                     {parse(props.data.links.about)}
                   </Link>
                 </span>
               </div>
               <div className="link">
-                <span className="pointer" onClick={closeNav}>
+                <span
+                  className="pointer nav-link"
+                  onClick={closeNav}
+                  style={router.pathname === "/about" ? bold : {}}
+                >
                   <Link href="/service" passHref>
                     {parse(props.data.links.service)}
                   </Link>
@@ -53,10 +71,12 @@ const Navbar = (props) => {
                 </option>
                 <option value="dutch">{parse(props.data.languages[1])}</option>
               </select>
-              <div className="btn pointer" onClick={closeNav}>
-                <Image src={suitcase} alt="Suitcase" />
-                {parse(props.data.button1)}
-              </div>
+              <Link href="/contact" passHref>
+                <div className="btn pointer" onClick={closeNav}>
+                  <Image src={suitcase} alt="Suitcase" />
+                  {parse(props.data.button1)}
+                </div>
+              </Link>
               <div className="btn2 pointer" onClick={closeNav}>
                 <BiBuildingHouse />
                 {parse(props.data.button2)}
@@ -67,6 +87,7 @@ const Navbar = (props) => {
       </div>
     );
   };
+
   return (
     <div className="navbar">
       <div className="brand-name">
@@ -76,22 +97,39 @@ const Navbar = (props) => {
       </div>
       <div className="nav-links">
         <Link href="/" passHref>
-          <div className="link pointer">{parse(props.data.links.home)}</div>
+          <div
+            className="link pointer nav-link"
+            style={router.pathname === "/" ? bold : {}}
+          >
+            {parse(props.data.links.home)}
+          </div>
         </Link>
         <Link href="/about" passHref>
-          <div className="link pointer">{parse(props.data.links.about)}</div>
+          <div
+            className="link pointer nav-link"
+            style={router.pathname === "/about" ? bold : {}}
+          >
+            {parse(props.data.links.about)}
+          </div>
         </Link>
         <Link href="/service" passHref>
-          <div className="link pointer">{parse(props.data.links.service)}</div>
+          <div
+            className="link pointer nav-link"
+            style={router.pathname === "/service" ? bold : {}}
+          >
+            {parse(props.data.links.service)}
+          </div>
         </Link>
       </div>
 
       {/* Visible for only web view */}
       <div className="visible-lg">
-        <div className="btn pointer">
-          <Image src={suitcase} alt="Suitcase" />
-          {parse(props.data.button1)}
-        </div>
+        <Link href="/contact" passHref>
+          <div className="btn pointer">
+            <Image src={suitcase} alt="Suitcase" />
+            {parse(props.data.button1)}
+          </div>
+        </Link>
         <select className="dropdown pointer" name="language" id="lang">
           <option value="english">{parse(props.data.languages[0])}</option>
           <option value="dutch">{parse(props.data.languages[1])}</option>
@@ -100,10 +138,12 @@ const Navbar = (props) => {
 
       {/* Visible for only mobile view */}
       <div className="hidden-lg">
-        <div className="btn pointer">
-          <Image src={suitcase} alt="Suitcase" />
-          {parse(props.data.button1)}
-        </div>
+        <Link href="/contact" passHref>
+          <div className="btn pointer">
+            <Image src={suitcase} alt="Suitcase" />
+            {parse(props.data.button1)}
+          </div>
+        </Link>
         <div className="toggle-btn pointer" onClick={openNav}>
           <CgMenuRightAlt />
         </div>

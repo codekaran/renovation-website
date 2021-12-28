@@ -23,6 +23,11 @@ $mob: 990px;
     cursor: pointer;
 }
 
+.nav-link:hover {
+    font-weight: 800 !important;
+    color: $dark !important;
+}
+
 // Navbar
 .navbar {
     height: 90px;
@@ -1240,6 +1245,276 @@ $mob: 990px;
                     left: auto;
                     right: 50px;
                 }
+            }
+        }
+    }
+}
+
+// Contact Page
+.contact-page {
+    .hero-section {
+        display: flex;
+        margin: 0px 0px 0px 100px;
+        @media (max-width: $mob) {
+            flex-direction: column;
+            margin: 0px;
+        }
+        .content {
+            flex: 0.5;
+            padding-right: 90px;
+            margin-top: 100px;
+            @media (max-width: $mob) {
+                flex: auto;
+                padding: 0px 20px 64px;
+                margin-top: 75px;
+            }
+            h1 {
+                font-weight: bold;
+                font-size: 96px;
+                line-height: 113px;
+                color: $dark2;
+                margin: 0px 0px 100px;
+                @media (max-width: $mob) {
+                    font-size: 48px;
+                    line-height: 56px;
+                    margin: 0px 0px 64px;
+                }
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 42px;
+                color: $dark2;
+                margin: 0px 0px 16px;
+                @media (max-width: $mob) {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+            p {
+                font-size: 18px;
+                line-height: 42px;
+                color: $dark3;
+                margin: 0px;
+                @media (max-width: $mob) {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+        }
+        .contact-form {
+            flex: 0.5;
+            padding: 84px 72px;
+            background-color: rgba($yellow, 0.3);
+            @media (max-width: $mob) {
+                flex: auto;
+                padding: 64px 20px;
+            }
+            h1 {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 42px;
+                color: $dark2;
+                margin: 0px 0px 12px;
+                @media (max-width: $mob) {
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+                    margin-bottom: 8px;
+                }
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 42px;
+                font-weight: normal;
+                color: $dark2;
+                margin: 0px 0px 18px;
+                @media (max-widht: $mob) {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin-bottom: 24px;
+                }
+            }
+            .form {
+                margin: 0px 24px;
+                width: 100%;
+                @media (max-width: $mob) {
+                    margin: 0px;
+                }
+                .input {
+                    margin: 0px 0px 20px;
+                    padding-right: 20px;
+                    width: 100%;
+                    display: inline-block;
+                    @media (max-width: $mob) {
+                        padding: 0px;
+                    }
+                    p {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 32px;
+                        color: $dark2;
+                        margin: 0px;
+                        .required {
+                            color: red;
+                            font-size: 16px;
+                        }
+                    }
+                    input {
+                        background-color: inherit;
+                        border: none;
+                        font-size: 18px;
+                        line-height: 42px;
+                        color: $dark;
+                        padding: 0px 20px;
+                        width: 90%;
+                        border-bottom: 2px solid rgba($dark, 0.2);
+                        @media (max-width: $mob) {
+                            font-size: 16px;
+                            line-height: 28px;
+                            padding: 0px 8px;
+                        }
+                    }
+                    input:focus {
+                        outline: none;
+                        background-color: rgba($dark3, 0.1);
+                    }
+                }
+                .input:nth-child(1),
+                .input:nth-child(2) {
+                    width: 50%;
+                }
+                .input:nth-child(4) {
+                    textarea {
+                        background-color: inherit;
+                        border: none;
+                        font-size: 18px;
+                        line-height: 32px;
+                        color: $dark;
+                        padding: 10px 20px;
+                        width: 90%;
+                        border-bottom: 2px solid rgba($dark, 0.2);
+                        overflow: hidden;
+                        resize: none;
+                        @media (max-width: $mob) {
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+                    }
+                    textarea:focus {
+                        outline: none;
+                        background-color: rgba($dark3, 0.1);
+                    }
+                }
+                button {
+                    width: 246px;
+                    height: 64px;
+                    background-color: $dark;
+                    border: none;
+                    border-radius: 0px;
+                    padding: 20px 36px;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: $light;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 36px;
+                    @media (max-width: $mob) {
+                        width: 200px;
+                        height: 56px;
+                        font-size: 18px;
+                        line-height: 21px;
+                        padding: 0px 20px;
+                        margin: 36px auto 0px;
+                    }
+                }
+            }
+        }
+    }
+    .contact-section {
+        margin: 140px 0px;
+        padding-left: 90px;
+        @media (max-width: $mob) {
+            margin: 75px 0px;
+            padding-left: 20px;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 42px;
+            color: $dark2;
+            margin: 0px;
+            padding: 0px 0px 15px 30px;
+            border-bottom: 1px solid rgba($dark, 0.2);
+            @media (max-width: $mob) {
+                font-size: 24px;
+                line-height: 28px;
+                padding: 0px 0px 8px 0px;
+            }
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 40px 90px 0px 0px;
+            @media (max-width: $mob) {
+                flex-direction: column;
+                padding: 0px 64px 0px 44px;
+            }
+            .card {
+                flex: 0.33;
+                border-right: 10px solid $dark;
+                text-align: center;
+                @media (max-width: $mob) {
+                    flex: auto;
+                    border: none;
+                    padding: 32px 0px;
+                    border-bottom: 10px solid $dark;
+                }
+                .icon {
+                    height: 136px;
+                    width: 136px;
+                    border: 2px solid $dark;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 45px;
+                    color: $dark;
+                    margin: auto;
+                    @media (max-width: $mob) {
+                        height: 84px;
+                        width: 84px;
+                        font-size: 28px;
+                    }
+                }
+                .heading {
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $dark;
+                    margin: 20px 0px;
+                    @media (max-width: $mob) {
+                        font-size: 18px;
+                        line-height: 21px;
+                        margin: 20px 0px 12px;
+                    }
+                }
+                .sub-heading {
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: $dark;
+                    margin: 0px;
+                    padding: 0px 40px 20px;
+                    @media (max-width: $mob) {
+                        font-size: 16px;
+                        line-height: 19px;
+                        padding: 0px;
+                    }
+                }
+            }
+            .card:last-child {
+                border: none;
             }
         }
     }

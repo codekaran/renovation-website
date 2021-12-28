@@ -12,19 +12,19 @@ const about = (props) => {
       <Head>
         <title>About me | RENGEB</title>
       </Head>
-      <AboutPage data={props.data.sections} images={images}/>
+      <AboutPage data={props.data.sections} images={images} />
     </Fragment>
   );
 };
 
 export default about;
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   let data = {};
-  // const lang = locale === "nl" ? "nl" : "en";
+  const lang = locale === "nl" ? "nl" : "en";
   try {
     let res = await fetch(
-      "http://161.35.41.189/getData?website=rengeb&page=about&lang=en"
+      "http://161.35.41.189/getData?website=rengeb&page=about&lang=" + lang
     );
     res = await res.json();
     data = JSON.parse(res.data);

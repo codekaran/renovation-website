@@ -40,12 +40,12 @@ const Home = (props) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   let data = {};
-  // const lang = locale === "nl" ? "nl" : "en";
+  const lang = locale === "nl" ? "nl" : "en";
   try {
     let res = await fetch(
-      "http://161.35.41.189/getData?website=rengeb&page=home&lang=en"
+      "http://161.35.41.189/getData?website=rengeb&page=home&lang=" + lang
     );
     res = await res.json();
     data = JSON.parse(res.data);
