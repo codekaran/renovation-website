@@ -21,6 +21,10 @@ const Navbar = (props) => {
     color: "#000",
   };
   const router = useRouter();
+  const changeLanguage = (event) => {
+    const locale = event.target.value;
+    router.push("/", "/", { locale });
+  };
   const Toggle = (props) => {
     return (
       <div className="mobile-nav">
@@ -65,11 +69,15 @@ const Navbar = (props) => {
               </div>
             </div>
             <div className="center">
-              <select className="dropdown pointer" name="language" id="lang">
-                <option value="english">
-                  {parse(props.data.languages[0])}
-                </option>
-                <option value="dutch">{parse(props.data.languages[1])}</option>
+              <select
+                className="dropdown pointer"
+                name="language"
+                id="lang"
+                onChange={changeLanguage}
+              >
+                <option value="en">{parse(props.data.languages[0])}</option>
+                <option value="nl">{parse(props.data.languages[1])}</option>
+                <option value="fr">{parse(props.data.languages[2])}</option>
               </select>
               <Link href="/contact" passHref>
                 <div className="btn pointer" onClick={closeNav}>
@@ -130,9 +138,15 @@ const Navbar = (props) => {
             {parse(props.data.button1)}
           </div>
         </Link>
-        <select className="dropdown pointer" name="language" id="lang">
-          <option value="english">{parse(props.data.languages[0])}</option>
-          <option value="dutch">{parse(props.data.languages[1])}</option>
+        <select
+          className="dropdown pointer"
+          name="language"
+          id="lang"
+          onChange={changeLanguage}
+        >
+          <option value="en">{parse(props.data.languages[0])}</option>
+          <option value="nl">{parse(props.data.languages[1])}</option>
+          <option value="fr">{parse(props.data.languages[2])}</option>
         </select>
       </div>
 

@@ -12,7 +12,7 @@ const data = {
       about: "About",
       service: "Service",
     },
-    languages: ["en", "nl"],
+    languages: ["en", "nl", "fr"],
     button1: "Hire me",
     button2: "My work",
   },

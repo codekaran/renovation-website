@@ -21,7 +21,7 @@ export default about;
 
 export async function getStaticProps({ locale }) {
   let data = {};
-  const lang = locale === "nl" ? "nl" : "en";
+  const lang = locale === "nl" ? "nl" : locale === "en" ? "en" : "fr";
   try {
     let res = await fetch(
       "http://161.35.41.189/getData?website=rengeb&page=about&lang=" + lang

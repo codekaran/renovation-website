@@ -156,6 +156,7 @@ const mobile = [
   },
 ];
 
+
 const HomePage = (props) => {
   return (
     <div className="home-page">
@@ -176,10 +177,12 @@ const HomePage = (props) => {
                 {parse(props.data[0].Button1)}
               </div>
             </Link>
-            <div className="btn2 pointer">
-              <BiBuildingHouse />
-              {parse(props.data[0].Button2)}
-            </div>
+            <a href="#gallery">
+              <div className="btn2 pointer">
+                <BiBuildingHouse />
+                {parse(props.data[0].Button2)}
+              </div>
+            </a>
           </div>
         </div>
         <div
@@ -258,7 +261,7 @@ const HomePage = (props) => {
       </div>
 
       {/* Gallery Section */}
-      <div className="gallery-section">
+      <div className="gallery-section" id="gallery">
         <h1 className="heading">{parse(props.data[3].Heading)}</h1>
         <div className="content-web">
           {props.gallery.map((image, index) => {
