@@ -50,7 +50,6 @@ export async function getStaticProps({ locale }) {
     res = await res.json();
     data = JSON.parse(res.data);
     data["path"] = "";
-
   } catch (err) {
     console.log(err);
   }
