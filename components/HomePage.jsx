@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import parse from "html-react-parser";
 import { BiBuildingHouse } from "react-icons/bi";
 import Link from "next/link";
+import smoothScroll from "./smoothscroll";
 
 const responsive = {
   web: {
@@ -156,7 +157,6 @@ const mobile = [
   },
 ];
 
-
 const HomePage = (props) => {
   return (
     <div className="home-page">
@@ -177,12 +177,15 @@ const HomePage = (props) => {
                 {parse(props.data[0].Button1)}
               </div>
             </Link>
-            <a href="#gallery">
-              <div className="btn2 pointer">
-                <BiBuildingHouse />
-                {parse(props.data[0].Button2)}
-              </div>
-            </a>
+            <div
+              className="btn2 pointer"
+              onClick={() => {
+                smoothScroll("#gallery", 1000);
+              }}
+            >
+              <BiBuildingHouse />
+              {parse(props.data[0].Button2)}
+            </div>
           </div>
         </div>
         <div

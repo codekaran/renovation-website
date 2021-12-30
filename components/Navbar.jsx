@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { MdClose } from "react-icons/md";
 import { BiBuildingHouse } from "react-icons/bi";
 import suitcase from "../public/Suitcase.svg";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
+import smoothScroll from "./smoothscroll";
 
 const Navbar = (props) => {
   const [state, setState] = useState(false);
@@ -21,18 +22,31 @@ const Navbar = (props) => {
     color: "#000",
   };
   const router = useRouter();
+  const [lang, setLang] = useState("en");
   const changeLanguage = (event) => {
     const locale = event.target.value;
+    setLang(locale);
     router.push("/", "/", { locale });
   };
+  const myWorkBtn = () => {
+    if (router.pathname !== "/") {
+      router.push("/");
+    }
+    smoothScroll("#gallery", 1000);
+    closeNav();
+  };
+
+  // Mobile nav
   const Toggle = (props) => {
     return (
       <div className="mobile-nav">
         <div className="box">
+          {/* Close button */}
           <div className="close">
             <MdClose onClick={closeNav} />
           </div>
           <div>
+            {/* Links */}
             <div className="links">
               <div className="link">
                 <span
@@ -69,23 +83,27 @@ const Navbar = (props) => {
               </div>
             </div>
             <div className="center">
+              {/* Language change dropdown */}
               <select
                 className="dropdown pointer"
                 name="language"
                 id="lang"
+                value={lang}
                 onChange={changeLanguage}
               >
                 <option value="en">{parse(props.data.languages[0])}</option>
                 <option value="nl">{parse(props.data.languages[1])}</option>
                 <option value="fr">{parse(props.data.languages[2])}</option>
               </select>
+              {/* Hire me button */}
               <Link href="/contact" passHref>
                 <div className="btn pointer" onClick={closeNav}>
                   <Image src={suitcase} alt="Suitcase" />
                   {parse(props.data.button1)}
                 </div>
               </Link>
-              <div className="btn2 pointer" onClick={closeNav}>
+              {/* My work button */}
+              <div className="btn2 pointer" onClick={myWorkBtn}>
                 <BiBuildingHouse />
                 {parse(props.data.button2)}
               </div>
@@ -142,6 +160,7 @@ const Navbar = (props) => {
           className="dropdown pointer"
           name="language"
           id="lang"
+          value={lang}
           onChange={changeLanguage}
         >
           <option value="en">{parse(props.data.languages[0])}</option>
