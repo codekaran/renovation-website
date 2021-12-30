@@ -29,9 +29,6 @@ const Navbar = (props) => {
     router.push("/", "/", { locale });
   };
   const myWorkBtn = () => {
-    if (router.pathname !== "/") {
-      router.push("/");
-    }
     smoothScroll("#gallery", 1000);
     closeNav();
   };
@@ -103,10 +100,12 @@ const Navbar = (props) => {
                 </div>
               </Link>
               {/* My work button */}
-              <div className="btn2 pointer" onClick={myWorkBtn}>
-                <BiBuildingHouse />
-                {parse(props.data.button2)}
-              </div>
+              {router.pathname === "/" && (
+                <div className="btn2 pointer" onClick={myWorkBtn}>
+                  <BiBuildingHouse />
+                  {parse(props.data.button2)}
+                </div>
+              )}
             </div>
           </div>
         </div>
