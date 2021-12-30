@@ -7,7 +7,7 @@ import { BiBuildingHouse } from "react-icons/bi";
 import suitcase from "../public/Suitcase.svg";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
-import smoothScroll from "./smoothscroll";
+import smoothScroll from "./smoothScroll";
 
 const Navbar = (props) => {
   const [state, setState] = useState(false);

@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import parse from "html-react-parser";
 import { BiBuildingHouse } from "react-icons/bi";
 import Link from "next/link";
-import smoothScroll from "./smoothscroll";
+import smoothScroll from "./smoothScroll";
 
 const responsive = {
   web: {
