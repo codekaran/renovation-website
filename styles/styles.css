@@ -43,6 +43,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 6.5%;
+  position: fixed;
+  top: 0px;
+  background-color: #ffffff;
+  z-index: 100;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 @media (max-width: 990px) {
@@ -473,6 +479,16 @@
 
 .bg-yellow {
   background: rgba(231, 223, 34, 0.3);
+}
+
+.home-page {
+  padding-top: 90px;
+}
+
+@media (max-width: 990px) {
+  .home-page {
+    padding-top: 56px;
+  }
 }
 
 .home-page .hero-section {
@@ -1132,6 +1148,16 @@
   }
 }
 
+.about-page {
+  padding-top: 90px;
+}
+
+@media (max-width: 990px) {
+  .about-page {
+    padding-top: 56px;
+  }
+}
+
 .about-page .hero-section {
   margin: 80px 0px;
   padding: 0px 0px 0px 120px;
@@ -1508,6 +1534,16 @@
   }
 }
 
+.service-page {
+  padding-top: 90px;
+}
+
+@media (max-width: 990px) {
+  .service-page {
+    padding-top: 56px;
+  }
+}
+
 .service-page .hero-section {
   margin: 80px 0;
   padding: 0px 0px 0px 90px;
@@ -1779,6 +1815,16 @@
 .service-page .service-section .content .card:nth-child(even) .float {
   left: auto;
   right: 50px;
+}
+
+.contact-page {
+  padding-top: 90px;
+}
+
+@media (max-width: 990px) {
+  .contact-page {
+    padding-top: 56px;
+  }
 }
 
 .contact-page .hero-section {

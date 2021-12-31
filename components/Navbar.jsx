@@ -113,8 +113,27 @@ const Navbar = (props) => {
     );
   };
 
+  const [scrollTop, setScrollTop] = useState("0px");
+  const [pageOffset, setPageOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 0) {
+        const newValue = window.scrollY;
+        const oldValue = pageOffset;
+        const val = newValue > oldValue ? "-95px" : "0px";
+        setScrollTop(val);
+        setPageOffset(newValue);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pageOffset]);
+
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ transform: `translateY(${scrollTop})` }}>
       <div className="brand-name">
         <Link href="/" passHref>
           <span className="pointer">{parse(props.data.heading)}</span>

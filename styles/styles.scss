@@ -37,6 +37,11 @@ $mob: 990px;
     align-items: center;
     justify-content: space-between;
     padding: 0 6.5%;
+    position: fixed;
+    top: 0px;
+    background-color: $light;
+    z-index: 100;
+    transition: 0.3s ease;
     @media (max-width: $mob) {
         height: 56px;
     }
@@ -346,6 +351,10 @@ $mob: 990px;
 
 // Home Page
 .home-page {
+    padding-top: 90px;
+    @media (max-width: $mob) {
+        padding-top: 56px;
+    }
     .hero-section {
         margin: 0px 0px 80px;
         padding-left: 100px;
@@ -805,6 +814,10 @@ $mob: 990px;
 
 // About Page
 .about-page {
+    padding-top: 90px;
+    @media (max-width: $mob) {
+        padding-top: 56px;
+    }
     .hero-section {
         margin: 80px 0px;
         padding: 0px 0px 0px 120px;
@@ -1062,6 +1075,10 @@ $mob: 990px;
 
 // Service page
 .service-page {
+    padding-top: 90px;
+    @media (max-width: $mob) {
+        padding-top: 56px;
+    }
     .hero-section {
         margin: 80px 0;
         padding: 0px 0px 0px 90px;
@@ -1252,6 +1269,10 @@ $mob: 990px;
 
 // Contact Page
 .contact-page {
+    padding-top: 90px;
+    @media (max-width: $mob) {
+        padding-top: 56px;
+    }
     .hero-section {
         display: flex;
         margin: 0px 0px 0px 100px;
